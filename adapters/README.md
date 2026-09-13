@@ -3,15 +3,16 @@
 The five LoRA adapters are **not in this repository**. They total about 1.9 GB, which is past the
 point where git is the right tool. They live on the Hugging Face Hub.
 
-| Adapter | Branch | Trained on | Benchmarked | License |
-|---|---|---|---|---|
-| `xlam-adapter` | tool-calling SFT | xLAM-60k | BFCL + τ³ | **CC-BY-NC-4.0** |
-| `dxlam-adapter` | distillation on the xLAM branch | teacher outputs | BFCL + τ³ | **CC-BY-NC-4.0** (inherited) |
-| `oh-adapter` | instruction SFT | OpenHermes-2.5 | not yet | see dataset card |
-| `distill-base-adapter` | distillation on the base | teacher outputs | not yet | see teacher terms |
-| `doh-adapter` | distillation on the OH branch | teacher outputs | not yet | see dataset card + teacher |
+| Adapter | Branch | Trained on | Benchmarked | License | Hub |
+|---|---|---|---|---|---|
+| `xlam` | tool-calling SFT | xLAM-60k | BFCL + τ³ | **CC-BY-NC-4.0** | [qwen3.8-27b-lora-xlam](https://huggingface.co/nickzin/qwen3.8-27b-lora-xlam) |
+| `dxlam` | distillation on the xLAM branch | teacher outputs | BFCL + τ³ | **CC-BY-NC-4.0** (inherited) | [qwen3.8-27b-lora-dxlam](https://huggingface.co/nickzin/qwen3.8-27b-lora-dxlam) |
+| `oh` | instruction SFT | OpenHermes-2.5 | not yet | see dataset card | [qwen3.8-27b-lora-oh](https://huggingface.co/nickzin/qwen3.8-27b-lora-oh) |
+| `distill-base` | distillation on the base | teacher outputs | not yet | see teacher terms | [qwen3.8-27b-lora-distill-base](https://huggingface.co/nickzin/qwen3.8-27b-lora-distill-base) |
+| `doh` | distillation on the OH branch | teacher outputs | not yet | see dataset card + teacher | [qwen3.8-27b-lora-doh](https://huggingface.co/nickzin/qwen3.8-27b-lora-doh) |
 
-Links to the Hub repositories are added here once uploaded.
+Each Hub repository carries its own model card with the base model, the training data, the
+measured results where they exist, and the license.
 
 ## Why the two unmeasured adapters are published
 

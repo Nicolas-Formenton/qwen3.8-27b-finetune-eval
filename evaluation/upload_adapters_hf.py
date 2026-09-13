@@ -9,6 +9,15 @@ Idempotent: re-running overwrites files and re-creates repos if missing.
 import pathlib
 import sys
 
+# Must run BEFORE huggingface_hub/httpx import TLS state. This machine has TLS interception
+# (a security product re-signing traffic), so the bundled certifi roots are incomplete and
+# httpx fails verification intermittently; small files survived on retry, a 467 MB upload did
+# not. truststore makes Python use the OS certificate store, which carries the interception
+# root, and removes the failures entirely.
+import truststore
+
+truststore.inject_into_ssl()
+
 from huggingface_hub import HfApi
 
 USER = "nickzin"
