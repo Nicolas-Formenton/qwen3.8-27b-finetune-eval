@@ -1,0 +1,17 @@
+{
+  "run": "eval-01",
+  "date": "2026-09-09",
+  "models": ["base", "tuned-openhermes-lora"],
+  "suite": "20 deterministic tasks (json/format/tool/content), strict checks, temperature 0.2, thinking default on",
+  "results": {
+    "base": {"passed": 7, "n": 20, "pass_rate": 0.35,
+      "by_cat": {"json": {"pass": 0, "n": 3}, "tool": {"pass": 0, "n": 3}, "format": {"pass": 5, "n": 12}, "content": {"pass": 2, "n": 2}}},
+    "tuned_openhermes": {"passed": 11, "n": 20, "pass_rate": 0.55,
+      "by_cat": {"json": {"pass": 1, "n": 3}, "tool": {"pass": 2, "n": 3}, "format": {"pass": 6, "n": 12}, "content": {"pass": 2, "n": 2}}}
+  },
+  "delta": {"pass_rate_pp": 20, "pass_rate_rel_pct": 57.1, "tool_json_gain": "0/3 -> 2/3"},
+  "training": {"method": "LoRA r=16 (PEFT+transformers Trainer), BF16", "dataset": "OpenHermes-2.5 slice 3000 rows (general instruct)",
+    "steps": 200, "final_loss": 0.6344, "train_loss": 0.7506, "runtime_s": 6861,
+    "model": "Qwen/Qwen3.8-27B", "hardware": "1x MI300X 192GB", "rate": "$1.99/h"},
+  "notes": "Strict checks; thinking mode ON adds length and breaks word/sentence caps for both models. Base emits prose+JSON; tuned emits cleaner tool JSON. Suite is small (20) and self-built (no LLM judge); treat as directional, expand for final report."
+}

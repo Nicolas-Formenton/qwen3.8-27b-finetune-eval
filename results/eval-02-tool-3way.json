@@ -1,0 +1,19 @@
+{
+  "run": "eval-02-tool-3way",
+  "date": "2026-09-09",
+  "task": "40 held-out rows from Salesforce/xlam-function-calling-60k (rows 6000-6040, unseen in train), single API call per query, parse first function name from JSON in content (thinking on)",
+  "results": {
+    "base": {"accuracy": 0.175, "n": 40},
+    "openhermes-lora": {"accuracy": 0.80, "n": 40},
+    "xlam-lora-unsloth": {"accuracy": 0.925, "n": 40}
+  },
+  "suite_20_format_tasks": {
+    "base": 0.35, "openhermes-lora": 0.55, "xlam-lora-unsloth": 0.35
+  },
+  "notes": "xLAM SFT gives the expected tool-calling jump; OpenHermes SFT improves general format adherence; xLAM does not improve (slightly flat vs base on) general format suite. Trade-off measured, honest.",
+  "models": {
+    "base": "Qwen/Qwen3.8-27B BF16 via vLLM",
+    "openhermes-lora": "run1: PEFT LoRA r16, 3000 OpenHermes-2.5 rows, 200 steps",
+    "xlam-lora-unsloth": "run2: Unsloth LoRA r16, 6000 xLAM rows, 240 steps"
+  }
+}

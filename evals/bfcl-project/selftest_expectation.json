@@ -1,0 +1,8 @@
+{
+ "category": "simple_python",
+ "model": "agent-native-qwen38-base",
+ "n": 400,
+ "n_corrupted": 98,
+ "expected_accuracy_clean": 1.0,
+ "expected_accuracy_corrupt": 0.755
+}

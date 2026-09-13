@@ -1,0 +1,59 @@
+{
+  "benchmark": "BFCL v4 (Berkeley Function Calling Leaderboard)",
+  "run_date": "2026-09-12",
+  "configuration": {
+    "handler": "QwenFCHandler (is_fc_model=true) - native <tool_call> dialect",
+    "endpoint": "vLLM 0.29.0 ROCm, MI300X, --tool-call-parser hermes, --max-model-len 262144",
+    "topic": "Adaptadores LoRA servidos por nome (--enable-lora), um residente por vez",
+    "temperature": 0.001,
+    "num_threads": 16,
+    "thinking": "ON (BFCL_ENABLE_THINKING=1) - ver justificativa abaixo"
+  },
+  "why_thinking_on": {
+    "measurement": "irrelevance, 240 itens, mesmo modelo base",
+    "thinking_on": {"accuracy": 69.17, "wall_seconds": 135},
+    "thinking_off": {"accuracy": 17.08, "wall_seconds": 44},
+    "conclusion": "Com raciocinio suprimido o modelo RESPONDE a pergunta em vez de se abster de chamar funcao, que e exatamente o que a categoria mede. Custa 3.4x o tempo."
+  },
+  "harness_defects_fixed": [
+    {
+      "id": "B1",
+      "where": "bfcl_eval/model_handler/local_inference/base_oss_handler.py",
+      "what": "O loop de prontidao do servidor faz requests.get(f'{base_url}/models') SEM header de autorizacao. Contra um endpoint autenticado recebe 401, que nao e ConnectionError, entao o loop nunca sai. Queimou 341.062 requisicoes antes de ser morto.",
+      "fix": "evals/fix_bfcl_readiness.py - envia o bearer e impoe timeout no probe"
+    },
+    {
+      "id": "B2",
+      "where": "bfcl_eval/model_handler/local_inference/qwen_fc.py (QwenFCHandler._format_prompt)",
+      "what": "Monta o prompt por concatenacao de string e termina em '<|im_start|>assistant\\n' sem emitir o bloco <think></think> vazio que o chat_template.jinja do proprio modelo emite quando enable_thinking=false. O handler entao pede o orcamento inteiro de 4096 tokens, que o modelo gasta em raciocinio.",
+      "fix": "evals/fix_bfcl_thinking.py - insere o bloco vazio, com gate por env BFCL_ENABLE_THINKING"
+    }
+  ],
+  "non_live": {
+    "note": "Rodado nos 3 modelos. O base tambem rodou multi_turn.",
+    "columns": ["python_simple", "java_simple", "javascript_simple", "multiple", "parallel", "parallel_multiple", "irrelevance", "OVERALL"],
+    "base":  {"label": "Qwen3.8-27B base BF16",                        "python_simple": 96.50, "java_simple": 63.00, "javascript_simple": 76.00, "multiple": 95.00, "parallel": 89.50, "parallel_multiple": 88.50, "irrelevance": 67.92, "OVERALL": 87.87, "rank": 3},
+    "xlam":  {"label": "Qwen3.8-27B + xLAM-60k LoRA r16 (SFT)",       "python_simple": 96.75, "java_simple": 64.00, "javascript_simple": 80.00, "multiple": 95.00, "parallel": 94.00, "parallel_multiple": 89.50, "irrelevance": 5.42,  "OVERALL": 89.69, "rank": 1},
+    "dxlam": {"label": "Qwen3.8-27B + distill Kimi K2.6 (on xLAM)",   "python_simple": 94.25, "java_simple": 64.00, "javascript_simple": 72.00, "multiple": 94.50, "parallel": 91.00, "parallel_multiple": 90.00, "irrelevance": 85.83, "OVERALL": 88.06, "rank": 2}
+  },
+  "multi_turn_base_only": {
+    "note": "So o modelo base. Nao rodado nos adapters (decisao de orcamento de GPU).",
+    "base": {"multi_turn_base": 69.00, "multi_turn_miss_func": 65.50, "multi_turn_long_context": 62.00, "multi_turn_miss_param": 52.00}
+  },
+  "headline_finding": {
+    "statement": "O SFT com xLAM destroi a abstencao (67.92% -> 5.42%) e a destilacao por cima do xLAM REPARA e supera o base (85.83%).",
+    "detail": "No agregado non_live os tres modelos ficam entre 87.87% e 89.69% - a media esconde o efeito. A coluna irrelevance e a unica que separa: uma variacao de 15x (5.42 vs 85.83).",
+    "correction": "Um registro anterior atribuia o colapso da abstencao ao D-xLAM (5.8%). A medicao por nome de modelo mostra que o colapso e do xLAM puro (5.42%); o D-xLAM e justamente o que conserta (85.83%)."
+  },
+  "reproduce": [
+    "evals/fix_bfcl_readiness.py   # corrige o probe de prontidao (401 infinito)",
+    "evals/fix_bfcl_thinking.py    # emite o bloco de thinking vazio",
+    "evals/apply_bfcl_model_config.py  # registra 12 entradas (6 variantes x Prompt/FC)",
+    "evals/run_matrix.sh non_live,multi_turn   # matriz completa, um LoRA residente por vez"
+  ],
+  "sources": {
+    "csv": "results/bfcl/data_non_live.csv",
+    "raw_logs": ["results/bfcl/base_control.log", "results/bfcl/chain.log"],
+    "per_category": "results/bfcl/BFCL_v4_*_score.json"
+  }
+}

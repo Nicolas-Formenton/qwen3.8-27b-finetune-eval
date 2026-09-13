@@ -1,0 +1,65 @@
+# ---- Artefatos grandes: vão para o HF Hub, não para o git ----------------
+# Os 5 adapters LoRA somam ~1,9 GB. O repo aponta para eles via adapters/README.md.
+artifacts/*-adapter/
+*.safetensors
+*.bin
+
+# Backups do droplet (contêm dumps de resultado; o que importa está em results/)
+artifacts/droplet-backup*/
+artifacts/droplet-state/
+artifacts/rescue-*/
+artifacts/audio_cache/
+artifacts/assets/
+
+# Tarballs soltos
+*.tar.gz
+*.tgz
+
+# ---- Ambientes e clones: reinstaláveis, e enormes ------------------------
+# bfcl-env e tau-env somam ~1,3 GB de venv; os clones do BFCL e do tau3 ~1,1 GB.
+evals/bfcl-env/
+evals/tau-env/
+evals/tools-gorilla/
+evals/tools-tau3-bench/
+**/site-packages/
+.venv/
+venv/
+
+# ---- Segredos: NUNCA commitar --------------------------------------------
+# Token de escrita do HF Hub fica em ~/.hf_write_token (fora do repo).
+.hf_write_token
+.hf_token
+*.pem
+*_key
+vllm_key
+.env
+
+# ---- Ruído de Python ------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---- Sistema -------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Logs grandes (os logs que interessam estão versionados em results/) ---
+*.log
+!results/**/*.log
+
+# ---- Documentos internos: NÃO são material de portfólio -------------------
+# Handoffs de sessão, logs de custo e planos de trabalho. Contêm IPs de instância,
+# caminhos locais e detalhes de ferramentas de assistência. Ficam no disco, fora do git.
+docs/handoff-*.md
+docs/PUBLISHING-PLAN.md
+docs/backlog-benchmark-repo.md
+docs/profile-*.md
+docs/optimization-plan-*.md
+ops/session.log
+ops/droplet.env
+*.bak
+*.bak-*
+

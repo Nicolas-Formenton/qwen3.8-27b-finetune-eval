@@ -1,0 +1,1 @@
+{"ts": "19:22:07", "path": "/v1/chat/completions", "max_tokens": null, "max_completion_tokens": null, "model": "qwen38-dxlam", "stream": true, "n_messages": 664, "n_tools": 21, "extra_body_keys": ["stream_options"], "sampling": {"temperature": null, "top_p": null, "seed": null, "reasoning_effort": null}}

@@ -1,0 +1,25 @@
+{
+  "run": "baseline-01",
+  "date": "2026-09-09",
+  "instance": "1x AMD Instinct MI300X (cloud)",
+  "hardware": "1x AMD Instinct MI300X (192 GB VRAM, gfx942)",
+  "model": "Qwen/Qwen3.8-27B",
+  "params": "27.8B dense, BF16",
+  "server": "vllm/vllm-openai-rocm:qwen38",
+  "vllm_flags": "--dtype bfloat16 --max-model-len 16384 --gpu-memory-utilization 0.9",
+  "benchmark": {
+    "method": "OpenAI-compatible API, streaming, 5 sequential requests, max_tokens=256",
+    "avg_decode_tok_per_s": 65.2,
+    "avg_ttft_ms_warm": 53.4,
+    "avg_completion_tokens": 256,
+    "server_reported_gen_throughput_tok_per_s": 64.5,
+    "kv_cache_usage_pct": 0.2,
+    "model_load_time_s": 19.7,
+    "model_vram_giB": 51.1
+  },
+  "comparison": {
+    "transformers_raw_baseline_tok_per_s": 4.5,
+    "speedup_vllm_vs_raw_transformers": 14.5
+  },
+  "notes": "First request TTFT 3.4s includes torch.compile warmup; subsequent requests 52-55ms. vLLM image prebuilt for gfx950, AITER kernels JIT-crashed on gfx942 -> launched with VLLM_ROCM_USE_AITER=0. One-time torch.compile ~60s cached."
+}

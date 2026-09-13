@@ -1,0 +1,104 @@
+{
+ "benchmark": "BFCL v4 (Berkeley Function Calling Leaderboard), run locally",
+ "harness": "bfcl-eval (PyPI), prompt mode + FC mode, --partial-eval per category",
+ "serving": "vLLM ROCm, base + 5 LoRA adapters loaded as modules (no merge)",
+ "decoding": "greedy/temperature=0 (BFCL default for these handlers)",
+ "result": {
+  "base": {
+   "kind": "base",
+   "prompt": {
+    "multiple": 0.865,
+    "parallel": 0.875,
+    "parallel_multiple": 0.855,
+    "irrelevance": 0.6625
+   },
+   "FC": {
+    "multiple": 0.955,
+    "parallel": 0.895,
+    "parallel_multiple": 0.875,
+    "irrelevance": 0.6833333333333333
+   }
+  },
+  "+OH": {
+   "kind": "sft",
+   "prompt": {
+    "multiple": 0.865,
+    "parallel": 0.865,
+    "parallel_multiple": 0.855,
+    "irrelevance": 0.6708333333333333
+   },
+   "FC": {
+    "multiple": 0.95,
+    "parallel": 0.895,
+    "parallel_multiple": 0.885,
+    "irrelevance": 0.675
+   }
+  },
+  "+xLAM": {
+   "kind": "sft",
+   "prompt": {
+    "multiple": 0.1,
+    "parallel": 0.015,
+    "parallel_multiple": 0.06,
+    "irrelevance": 0.7666666666666667
+   },
+   "FC": {
+    "multiple": 0.955,
+    "parallel": 0.93,
+    "parallel_multiple": 0.9,
+    "irrelevance": 0.058333333333333334
+   }
+  },
+  "D-base": {
+   "kind": "distill",
+   "prompt": {
+    "multiple": 0.88,
+    "parallel": 0.87,
+    "parallel_multiple": 0.845,
+    "irrelevance": 0.6541666666666667
+   },
+   "FC": {
+    "multiple": 0.96,
+    "parallel": 0.895,
+    "parallel_multiple": 0.87,
+    "irrelevance": 0.6833333333333333
+   }
+  },
+  "D-OH": {
+   "kind": "distill",
+   "prompt": {
+    "multiple": 0.865,
+    "parallel": 0.88,
+    "parallel_multiple": 0.855,
+    "irrelevance": 0.6708333333333333
+   },
+   "FC": {
+    "multiple": 0.955,
+    "parallel": 0.895,
+    "parallel_multiple": 0.87,
+    "irrelevance": 0.6875
+   }
+  },
+  "D-xLAM": {
+   "kind": "distill",
+   "prompt": {
+    "multiple": 0.89,
+    "parallel": 0.88,
+    "parallel_multiple": 0.84,
+    "irrelevance": 0.9
+   },
+   "FC": {
+    "multiple": 0.95,
+    "parallel": 0.91,
+    "parallel_multiple": 0.89,
+    "irrelevance": 0.8708333333333333
+   }
+  }
+ },
+ "notes": [
+  "prompt mode = the benchmark's own dialect ([func_name1(a=1)]); FC mode = native tool-call template.",
+  "The two modes are NOT comparable to each other; the gap is itself the finding.",
+  "irrelevance = abstention: correct behaviour is to NOT emit a tool call.",
+  "Caveat: in prompt mode a model that fails to produce parseable calls can score 'correct' on irrelevance for the wrong reason (silence instead of an informed refusal). Read the two modes together."
+ ]
+}

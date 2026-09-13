@@ -1,0 +1,146 @@
+{
+ "run": "eval-03-matrix-200",
+ "date": "2026-09-10",
+ "harness": {
+  "n": 200,
+  "sampling": "reservoir, seed=20260910, rows 6000+ of Salesforce/xlam-function-calling-60k (unseen)",
+  "temperature": 0,
+  "concurrency": 12,
+  "metric": "first function name in JSON list after stripping  thinking",
+  "engine": "vLLM 0.29 (vllm/vllm-openai-rocm:latest), --enforce-eager, bf16",
+  "suite": "eval_suite.py, 20 deterministic tasks",
+  "bench": "streaming, 256 tokens"
+ },
+ "caveats": [
+  "metric saturates: 6k-row LoRA changes ~1/200 answers",
+  "thinking disabled for all models",
+  "GLM not in matrix",
+  "xlam and dxlam runs invalid (see invalid_runs)"
+ ],
+ "invalid_runs": {
+  "xlam": "merge no-op -> bit-identical to base",
+  "dxlam": "trained on the broken xLAM base -> duplicate of D-base"
+ },
+ "results": {
+  "base": {
+   "n": 200,
+   "correct": 167,
+   "acc": 0.835,
+   "ci": [
+    0.7773,
+    0.88
+   ],
+   "parse_fail": 23,
+   "suite_pass": 6,
+   "suite_n": 20,
+   "bycat": {
+    "content": "2/2",
+    "format": "4/12",
+    "json": "0/3",
+    "tool": "0/3"
+   },
+   "tok_s": 20.6,
+   "ttft_s": 0.201
+  },
+  "oh": {
+   "n": 200,
+   "correct": 167,
+   "acc": 0.835,
+   "ci": [
+    0.7773,
+    0.88
+   ],
+   "parse_fail": 24,
+   "suite_pass": 10,
+   "suite_n": 20,
+   "bycat": {
+    "content": "2/2",
+    "format": "5/12",
+    "json": "1/3",
+    "tool": "2/3"
+   },
+   "tok_s": 19.2,
+   "ttft_s": 0.195
+  },
+  "xlamfix": {
+   "n": 200,
+   "correct": 168,
+   "acc": 0.84,
+   "ci": [
+    0.7829,
+    0.8843
+   ],
+   "parse_fail": 23,
+   "suite_pass": 7,
+   "suite_n": 20,
+   "bycat": {
+    "content": "2/2",
+    "format": "4/12",
+    "json": "0/3",
+    "tool": "1/3"
+   },
+   "tok_s": 20.8,
+   "ttft_s": 0.189
+  },
+  "dbase": {
+   "n": 200,
+   "correct": 168,
+   "acc": 0.84,
+   "ci": [
+    0.7829,
+    0.8843
+   ],
+   "parse_fail": 23,
+   "suite_pass": 7,
+   "suite_n": 20,
+   "bycat": {
+    "content": "2/2",
+    "format": "3/12",
+    "json": "0/3",
+    "tool": "2/3"
+   },
+   "tok_s": 19.5,
+   "ttft_s": 0.195
+  },
+  "doh": {
+   "n": 200,
+   "correct": 168,
+   "acc": 0.84,
+   "ci": [
+    0.7829,
+    0.8843
+   ],
+   "parse_fail": 23,
+   "suite_pass": 4,
+   "suite_n": 20,
+   "bycat": {
+    "content": "2/2",
+    "format": "2/12",
+    "json": "0/3",
+    "tool": "0/3"
+   },
+   "tok_s": 20.0,
+   "ttft_s": 0.199
+  },
+  "dxlamfix": {
+   "n": 200,
+   "correct": 168,
+   "acc": 0.84,
+   "ci": [
+    0.7829,
+    0.8843
+   ],
+   "parse_fail": 23,
+   "suite_pass": 6,
+   "suite_n": 20,
+   "bycat": {
+    "content": "2/2",
+    "format": "4/12",
+    "json": "0/3",
+    "tool": "0/3"
+   },
+   "tok_s": 20.0,
+   "ttft_s": 0.196
+  }
+ }
+}

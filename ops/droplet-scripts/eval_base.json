@@ -1,0 +1,145 @@
+{
+ "model": "base",
+ "results": [
+  {
+   "id": "json1",
+   "cat": "json",
+   "pass": false,
+   "time_s": 3.9,
+   "answer_head": "We need to respond to user: \"Reply ONLY with valid JSON: {\"ok\": true, \"items\": [\"a\",\"b\",\"c\"]}\"\n\nNeed output only valid JSON exactly likely t"
+  },
+  {
+   "id": "json2",
+   "cat": "json",
+   "pass": false,
+   "time_s": 4.0,
+   "answer_head": "We need respond to user: \"Envie APENAS JSON valido: {\"status\": \"ok\", \"total\": 42}\" Portuguese: Send ONLY valid JSON: {\"status\": \"ok\", \"total"
+  },
+  {
+   "id": "bullets5",
+   "cat": "format",
+   "pass": true,
+   "time_s": 5.2,
+   "answer_head": "We need to respond to user: \"List exactly 5 reasons to fine-tune an LLM. One per line starting with '- '.\" Need final exactly 5 lines, each "
+  },
+  {
+   "id": "bullets3pt",
+   "cat": "format",
+   "pass": false,
+   "time_s": 8.1,
+   "answer_head": "We need answer user in Portuguese. User: \"De exatamente 3 beneficios do ROCm, um por linha com '- '\". Need output exactly 3 lines, each star"
+  },
+  {
+   "id": "codefence",
+   "cat": "format",
+   "pass": true,
+   "time_s": 3.1,
+   "answer_head": "We need to respond to user: \"Write a python function add(a,b) inside a ```python code fence. Nothing else.\" Need final only code fence with "
+  },
+  {
+   "id": "single_sentence",
+   "cat": "format",
+   "pass": false,
+   "time_s": 3.2,
+   "answer_head": "We need to answer user: \"Explain what a GPU is in ONE sentence.\" Need final one sentence. Keep concise.\n</think>\n\nA GPU (graphics processing"
+  },
+  {
+   "id": "keyword_bandwidth",
+   "cat": "content",
+   "pass": true,
+   "time_s": 6.7,
+   "answer_head": "We need to answer user: \"In one paragraph, explain why memory bandwidth matters for LLM inference. You MUST include the word 'bandwidth'.\" N"
+  },
+  {
+   "id": "keyword_hermes",
+   "cat": "content",
+   "pass": true,
+   "time_s": 2.6,
+   "answer_head": "We need to respond to user: \"One sentence mentioning the word 'agent' and the word 'tool'.\" Need one sentence containing both words. Keep si"
+  },
+  {
+   "id": "tool_weather",
+   "cat": "tool",
+   "pass": false,
+   "time_s": 3.3,
+   "answer_head": "We need answer user asks weather in Sao Paulo right now. Need use tool. We must output ONLY JSON object {\"name\": \"get_weather\", \"arguments\":"
+  },
+  {
+   "id": "tool_stock",
+   "cat": "tool",
+   "pass": false,
+   "time_s": 3.3,
+   "answer_head": "We need answer user: \"Check the current price of AAPL.\" Need use tool get_stock. Must output ONLY JSON {\"name\": ..., \"arguments\": {...}}. Ne"
+  },
+  {
+   "id": "nopreamble",
+   "cat": "format",
+   "pass": false,
+   "time_s": 2.0,
+   "answer_head": "We need answer user's request: \"Answer directly with no preamble, no greeting: 2+2=?\" Need final just 4 likely. Ensure no preamble.\n</think>"
+  },
+  {
+   "id": "tsv",
+   "cat": "format",
+   "pass": false,
+   "time_s": 8.3,
+   "answer_head": "We need to respond to user: \"Output a TSV with exactly 3 rows and 2 columns: city<TAB>population. No header, no code fence.\"\n\nNeed final onl"
+  },
+  {
+   "id": "cap_words",
+   "cat": "format",
+   "pass": false,
+   "time_s": 13.2,
+   "answer_head": "We need answer user: \"Summarize LoRA in at most 20 words.\" Need produce final <=20 words. Need summarize LoRA. Could say: \"Low-Rank Adaptati"
+  },
+  {
+   "id": "pt_short",
+   "cat": "format",
+   "pass": false,
+   "time_s": 20.3,
+   "answer_head": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Language: Portuguese (\"Responda em portugues\").\n    *   Constraint: Maximum 15 words"
+  },
+  {
+   "id": "code_no_comment",
+   "cat": "format",
+   "pass": true,
+   "time_s": 5.8,
+   "answer_head": "We need to respond to user: \"Write python: x = [i*i for i in range(10)]. Output the code only.\" Need output code only. Likely just the line."
+  },
+  {
+   "id": "json_require_keys",
+   "cat": "json",
+   "pass": false,
+   "time_s": 4.7,
+   "answer_head": "We need to respond to user: \"JSON only: {\"model\": \"qwen\", \"vram_gb\": 192}\". User requests JSON only. Need final JSON only. Need likely outpu"
+  },
+  {
+   "id": "two_answers",
+   "cat": "format",
+   "pass": false,
+   "time_s": 3.0,
+   "answer_head": "We need to respond to user: \"Answer with exactly two short sentences.\" Need final exactly two short sentences. Need likely satisfy. Could be"
+  },
+  {
+   "id": "explicit_tool_names",
+   "cat": "tool",
+   "pass": false,
+   "time_s": 3.1,
+   "answer_head": "We need answer user's request. User: \"Schedule a meeting tomorrow 10am. Reply only the tool name.\" Tools available: send_email, create_calen"
+  },
+  {
+   "id": "no_markdown",
+   "cat": "format",
+   "pass": true,
+   "time_s": 2.9,
+   "answer_head": "We need to answer user: \"Reply without markdown: the square root of 144.\" Need final no markdown, just answer. Square root of 144 is 12. Cou"
+  },
+  {
+   "id": "bilingual_follow",
+   "cat": "format",
+   "pass": false,
+   "time_s": 2.7,
+   "answer_head": "We need to respond to user: \"Responda 'ok' se entendeu. So a palavra ok.\" Portuguese: Respond 'ok' if you understood. Only the word ok. Need"
+  }
+ ]
+}

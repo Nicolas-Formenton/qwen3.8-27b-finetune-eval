@@ -1,0 +1,145 @@
+{
+ "model": "xlamfix",
+ "results": [
+  {
+   "id": "json1",
+   "cat": "json",
+   "pass": false,
+   "time_s": 3.0,
+   "answer_head": "The user wants me to reply ONLY with valid JSON: {\"ok\": true, \"items\": [\"a\",\"b\",\"c\"]}. No explanation, no markdown, just the JSON.\n</think>\n"
+  },
+  {
+   "id": "json2",
+   "cat": "json",
+   "pass": false,
+   "time_s": 2.8,
+   "answer_head": "The user is asking me to send ONLY valid JSON: {\"status\": \"ok\", \"total\": 42}. They want just the JSON string, nothing else. Let me provide e"
+  },
+  {
+   "id": "bullets5",
+   "cat": "format",
+   "pass": true,
+   "time_s": 5.4,
+   "answer_head": "We need to respond to user: \"List exactly 5 reasons to fine-tune an LLM. One per line starting with '- '.\" Need final only 5 lines each star"
+  },
+  {
+   "id": "bullets3pt",
+   "cat": "format",
+   "pass": false,
+   "time_s": 9.6,
+   "answer_head": "O usu\u00e1rio pede em portugu\u00eas: \"De exatamente 3 beneficios do ROCm, um por linha com '- '\". Preciso responder apenas com 3 linhas, cada uma co"
+  },
+  {
+   "id": "codefence",
+   "cat": "format",
+   "pass": true,
+   "time_s": 2.3,
+   "answer_head": "The user wants a simple Python function that adds two numbers, wrapped in a ```python code fence, and nothing else.\n</think>\n\n```python\ndef "
+  },
+  {
+   "id": "single_sentence",
+   "cat": "format",
+   "pass": false,
+   "time_s": 10.6,
+   "answer_head": "The user wants a one-sentence explanation of what a GPU is. Let me think about the most accurate and concise way to describe it.\n\nA GPU (Gra"
+  },
+  {
+   "id": "keyword_bandwidth",
+   "cat": "content",
+   "pass": true,
+   "time_s": 6.4,
+   "answer_head": "We need to respond to user: \"In one paragraph, explain why memory bandwidth matters for LLM inference. You MUST include the word 'bandwidth'"
+  },
+  {
+   "id": "keyword_hermes",
+   "cat": "content",
+   "pass": true,
+   "time_s": 4.0,
+   "answer_head": "The user wants a single sentence that includes both the words 'agent' and 'tool'. Let me craft a simple, natural sentence.\n\n\"The agent used "
+  },
+  {
+   "id": "tool_weather",
+   "cat": "tool",
+   "pass": true,
+   "time_s": 2.6,
+   "answer_head": "The user is asking for the current weather in Sao Paulo. I need to use the get_weather function with the city parameter set to \"Sao Paulo\".\n"
+  },
+  {
+   "id": "tool_stock",
+   "cat": "tool",
+   "pass": false,
+   "time_s": 6.3,
+   "answer_head": "Reasoning:\n1. The user wants to know the current price of AAPL.\n2. I need to use the `get_stock` function from the provided tools.\n3. The `g"
+  },
+  {
+   "id": "nopreamble",
+   "cat": "format",
+   "pass": false,
+   "time_s": 6.4,
+   "answer_head": "Thinking:\n\n1.  Identify the core question: \"2+2=?\"\n2.  Identify the constraints: \"Answer directly with no preamble, no greeting\".\n3.  Calcul"
+  },
+  {
+   "id": "tsv",
+   "cat": "format",
+   "pass": false,
+   "time_s": 19.1,
+   "answer_head": "Thinking:\n\n1.  **Analyze the Request:**\n    *   Format: TSV (Tab-Separated Values).\n    *   Dimensions: Exactly 3 rows, 2 columns.\n    *   C"
+  },
+  {
+   "id": "cap_words",
+   "cat": "format",
+   "pass": false,
+   "time_s": 19.1,
+   "answer_head": "Thinking:\n\n1.  **Analyze the Request:**\n    *   Topic: LoRA (Low-Rank Adaptation).\n    *   Task: Summarize.\n    *   Constraint: At most 20 w"
+  },
+  {
+   "id": "pt_short",
+   "cat": "format",
+   "pass": false,
+   "time_s": 10.3,
+   "answer_head": "We need to respond in Portuguese, max 15 words: \"o que e VRAM?\" Means \"what is VRAM?\" Need answer in Portuguese, max 15 words. VRAM = Video "
+  },
+  {
+   "id": "code_no_comment",
+   "cat": "format",
+   "pass": true,
+   "time_s": 2.8,
+   "answer_head": "The user wants me to write a Python code that creates a list comprehension: x = [i*i for i in range(10)]. They want the code output only.\n</"
+  },
+  {
+   "id": "json_require_keys",
+   "cat": "json",
+   "pass": false,
+   "time_s": 3.7,
+   "answer_head": "The user is asking me to respond with JSON only, and they've provided a JSON object: {\"model\": \"qwen\", \"vram_gb\": 192}. They want me to simp"
+  },
+  {
+   "id": "two_answers",
+   "cat": "format",
+   "pass": false,
+   "time_s": 3.6,
+   "answer_head": "The user wants exactly two short sentences. I'll craft two concise sentences.\n\nSentence 1: \"The sun rises in the east.\"\nSentence 2: \"The moo"
+  },
+  {
+   "id": "explicit_tool_names",
+   "cat": "tool",
+   "pass": false,
+   "time_s": 10.9,
+   "answer_head": "The user wants to schedule a meeting tomorrow at 10am. I need to use the create_calendar_event tool. However, I need to figure out the date "
+  },
+  {
+   "id": "no_markdown",
+   "cat": "format",
+   "pass": true,
+   "time_s": 3.7,
+   "answer_head": "The user wants me to reply without markdown to the question \"the square root of 144.\" The square root of 144 is 12. I need to respond in pla"
+  },
+  {
+   "id": "bilingual_follow",
+   "cat": "format",
+   "pass": false,
+   "time_s": 3.4,
+   "answer_head": "The user is asking me to respond with just the word \"ok\" if I understood. They wrote in Portuguese: \"Responda 'ok' se entendeu. So a palavra"
+  }
+ ]
+}

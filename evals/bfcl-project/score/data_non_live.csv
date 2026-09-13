@@ -1,0 +1,2 @@
+Rank,Model,Non-Live Overall Acc,AST Summary,Simple AST,Python Simple AST,Java Simple AST,JavaScript Simple AST,Multiple AST,Parallel AST,Parallel Multiple AST,Irrelevance Detection
+1,Qwen3.8-27B base BF16 (Prompt),6.25%,N/A,N/A,75.00%,N/A,N/A,N/A,N/A,N/A,N/A

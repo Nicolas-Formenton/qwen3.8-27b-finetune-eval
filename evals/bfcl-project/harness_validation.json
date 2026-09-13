@@ -1,0 +1,11 @@
+{
+ "category": "simple_python",
+ "model": "agent-native-qwen38-base",
+ "n": 400,
+ "rows_altered": 100,
+ "expected_clean": 1.0,
+ "reported_clean": 1.0,
+ "expected_corrupt": 0.75,
+ "reported_corrupt": 0.75,
+ "harness_validated": true
+}

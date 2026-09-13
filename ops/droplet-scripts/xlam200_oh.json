@@ -1,0 +1,1957 @@
+{
+ "label": "oh",
+ "harness": "xlam_heldout_200 v1",
+ "n": 200,
+ "correct": 167,
+ "accuracy": 0.835,
+ "wilson_ci95": [
+  0.7773,
+  0.88
+ ],
+ "parse_failures": 24,
+ "wall_s": 72.7,
+ "concurrency": 12,
+ "seed": 20260910,
+ "temperature": 0,
+ "thinking": false,
+ "rows_per_s": 2.75,
+ "fails": [
+  {
+   "i": 2,
+   "expected": "properties_get_facilities",
+   "got": null,
+   "ok": false,
+   "time_s": 3.79,
+   "query": "Could you list the facilities for hotels 70809 and 20304 in Turkish and Ukrainian?",
+   "head": "[{\"name\": \"properties_get_facilities\", \"arguments\": {\"hotel_ids\": [70809, 20304], \"languagecode\": \"tr\"}}]"
+  },
+  {
+   "i": 6,
+   "expected": "linear_regression_prediction",
+   "got": null,
+   "ok": false,
+   "time_s": 5.4,
+   "query": "Predict the y-value for x = 10 using linear regression with the given data points: [(1, 3), (2, 6), (3, 9), (4, 12), (5,",
+   "head": "[{\"name\": \"linear_regression_prediction\", \"arguments\": {\"x_values\": [1, 2, 3, 4, 5], \"y_values\": [3, 6, 9, 12, 15], \"target_x\": 10}}]"
+  },
+  {
+   "i": 16,
+   "expected": "sort_numbers",
+   "got": "wire_resistance",
+   "ok": false,
+   "time_s": 7.21,
+   "query": "I have a list of numbers [2.718, 3.1415, 1.414, 0.577] that I want to sort in ascending order. I also want to find the r",
+   "head": "[{\"name\": \"sort_numbers\", \"arguments\": {\"numbers\": [2.718, 3.1415, 1.414, 0.577], \"descending\": false}}, {\"name\": \"wire_resistance\", \"arguments\": {\"length_m\": 2"
+  },
+  {
+   "i": 18,
+   "expected": "find_duplicate_number",
+   "got": "generate_random_string",
+   "ok": false,
+   "time_s": 5.96,
+   "query": "Find the duplicate number in the list [2, 1, 2, 3, 4] and generate a random string of length 12 with uppercase, digits, ",
+   "head": "[{\"name\": \"find_duplicate_number\", \"arguments\": {\"nums\": [2, 1, 2, 3, 4]}}, {\"name\": \"generate_random_string\", \"arguments\": {\"length\": 12, \"uppercase\": true, \"l"
+  },
+  {
+   "i": 20,
+   "expected": "calculate_median",
+   "got": null,
+   "ok": false,
+   "time_s": 3.08,
+   "query": "Calculate the median for the set of numbers: 7, 14, 21, 28, 35.",
+   "head": "[{\"name\": \"calculate_median\", \"arguments\": {\"numbers\": [7, 14, 21, 28, 35]}}]"
+  },
+  {
+   "i": 22,
+   "expected": "find_pairs_with_sum",
+   "got": null,
+   "ok": false,
+   "time_s": 3.38,
+   "query": "Find all pairs in the list [1, 2, 3, 4, 5] that sum up to 5.",
+   "head": "[{\"name\": \"find_pairs_with_sum\", \"arguments\": {\"nums\": [1, 2, 3, 4, 5], \"target\": 5}}]"
+  },
+  {
+   "i": 29,
+   "expected": "generate_password",
+   "got": null,
+   "ok": false,
+   "time_s": 4.83,
+   "query": "Generate a password of length 15 that includes special characters. Additionally, flatten the list [[1, 2], [3, [4, 5]], ",
+   "head": "[{\"name\": \"generate_password\", \"arguments\": {\"length\": 15, \"include_special\": true}}, {\"name\": \"flatten_list\", \"arguments\": {\"nested_list\": [[1, 2], [3, [4, 5]]"
+  },
+  {
+   "i": 32,
+   "expected": "calculate_quarterly_dividend",
+   "got": null,
+   "ok": false,
+   "time_s": 6.99,
+   "query": "Calculate the quarterly dividend for a company with $150,000 total dividend and 75,000 shares. Additionally, create a hi",
+   "head": "[{\"name\": \"calculate_quarterly_dividend\", \"arguments\": {\"total_dividend\": 150000, \"num_shares\": 75000}}, {\"name\": \"create_histogram\", \"arguments\": {\"data\": [5, "
+  },
+  {
+   "i": 36,
+   "expected": "std_deviation",
+   "got": null,
+   "ok": false,
+   "time_s": 3.11,
+   "query": "Calculate the standard deviation of the numbers [3.5, 4.5, 5.5, 6.5].",
+   "head": "[{\"name\": \"std_deviation\", \"arguments\": {\"numbers\": [3.5, 4.5, 5.5, 6.5]}}]"
+  },
+  {
+   "i": 37,
+   "expected": "find_kth_smallest_number",
+   "got": null,
+   "ok": false,
+   "time_s": 3.31,
+   "query": "What is the 3rd smallest number in the list [5, 2, 9, 1, 7]?",
+   "head": "[{\"name\": \"find_kth_smallest_number\", \"arguments\": {\"nums\": [5, 2, 9, 1, 7], \"k\": 3}}]"
+  },
+  {
+   "i": 61,
+   "expected": "binary_addition",
+   "got": null,
+   "ok": false,
+   "time_s": 5.71,
+   "query": "Perform binary addition on '1011' and '1101', and find the minimum in the array [4, 5, 6, 7, 0, 1, 2].",
+   "head": "[{\"name\": \"binary_addition\", \"arguments\": {\"a\": \"1011\", \"b\": \"1101\"}}, {\"name\": \"find_minimum_rotated_sorted_array\", \"arguments\": {\"nums\": [4, 5, 6, 7, 0, 1, 2]"
+  },
+  {
+   "i": 70,
+   "expected": "is_prime",
+   "got": null,
+   "ok": false,
+   "time_s": 6.51,
+   "query": "Are 29 and 37 prime numbers? Also, find a peak in the list [10, 20, 30, 40, 50, 60, 70].",
+   "head": "[{\"name\": \"is_prime\", \"arguments\": {\"num\": 29}}, {\"name\": \"is_prime\", \"arguments\": {\"num\": 37}}, {\"name\": \"find_peak_element\", \"arguments\": {\"nums\": [10, 20, 30"
+  },
+  {
+   "i": 74,
+   "expected": "wire_resistance",
+   "got": "note_duration",
+   "ok": false,
+   "time_s": 9.7,
+   "query": "Compute the resistance of a copper wire 25 meters long with a cross-sectional area of 0.0002 square meters. Find the 2nd",
+   "head": "[{\"name\": \"wire_resistance\", \"arguments\": {\"length_m\": 25, \"area_sq_m\": 0.0002, \"material\": \"copper\"}}, {\"name\": \"find_kth_smallest_number\", \"arguments\": {\"nums"
+  },
+  {
+   "i": 80,
+   "expected": "calculate_standard_deviation",
+   "got": null,
+   "ok": false,
+   "time_s": 6.78,
+   "query": "Calculate the standard deviation for the list of numbers [1.5, 2.5, 3.5, 4.5, 5.5] and also determine if a person can at",
+   "head": "[{\"name\": \"std_deviation\", \"arguments\": {\"numbers\": [1.5, 2.5, 3.5, 4.5, 5.5]}}, {\"name\": \"can_attend_all_meetings\", \"arguments\": {\"intervals\": [[1, 2], [4, 5],"
+  },
+  {
+   "i": 84,
+   "expected": "sort_numbers",
+   "got": null,
+   "ok": false,
+   "time_s": 3.55,
+   "query": "Sort the list of numbers [10.5, 2.7, 4.3, 7.9, 1.1] in ascending order.",
+   "head": "[{\"name\": \"sort_numbers\", \"arguments\": {\"numbers\": [10.5, 2.7, 4.3, 7.9, 1.1]}}]"
+  }
+ ],
+ "all": [
+  {
+   "i": 0,
+   "expected": "job_salary",
+   "got": "job_salary",
+   "ok": true,
+   "time_s": 7.11,
+   "query": "Estimate the salary for a mechanical engineer in Houston within a 180km radius. Also, provide the exchange rates for PLN",
+   "head": "[{\"name\": \"job_salary\", \"arguments\": {\"job_title\": \"mechanical engineer\", \"location\": \"houston, usa\", \"radius\": \"180\"}}, {\"name\": \"get_4_date_endpoint\", \"argume"
+  },
+  {
+   "i": 1,
+   "expected": "canvas_genres_list",
+   "got": "canvas_genres_list",
+   "ok": true,
+   "time_s": 3.67,
+   "query": "Can you list the genres in the canvas category for both English and German?",
+   "head": "[{\"name\": \"canvas_genres_list\", \"arguments\": {\"language\": \"en\"}}, {\"name\": \"canvas_genres_list\", \"arguments\": {\"language\": \"de\"}}]"
+  },
+  {
+   "i": 2,
+   "expected": "properties_get_facilities",
+   "got": null,
+   "ok": false,
+   "time_s": 3.79,
+   "query": "Could you list the facilities for hotels 70809 and 20304 in Turkish and Ukrainian?",
+   "head": "[{\"name\": \"properties_get_facilities\", \"arguments\": {\"hotel_ids\": [70809, 20304], \"languagecode\": \"tr\"}}]"
+  },
+  {
+   "i": 3,
+   "expected": "view_item",
+   "got": "view_item",
+   "ok": true,
+   "time_s": 7.18,
+   "query": "I need to view the catalog item with ID '12345' in the 'rest' format. The credentials are dated '2023-01-01T00:00:00Z', ",
+   "head": "[{\"name\": \"view_item\", \"arguments\": {\"creds_datetime\": \"2023-01-01T00:00:00Z\", \"creds_uuid\": \"abc123\", \"creds_checksum\": \"xyz789\", \"socket_id\": \"socket1\", \"cata"
+  },
+  {
+   "i": 4,
+   "expected": "cagr",
+   "got": "cagr",
+   "ok": true,
+   "time_s": 3.79,
+   "query": "What is the CAGR if an investment of $8,000 reached $10,000 over 3 years?",
+   "head": "[{\"name\": \"cagr\", \"arguments\": {\"start_value\": 8000, \"end_value\": 10000, \"years\": 3}}]"
+  },
+  {
+   "i": 5,
+   "expected": "dinotest",
+   "got": "dinotest",
+   "ok": true,
+   "time_s": 3.6,
+   "query": "Please test the endpoints with numbers 1 and 2 using the dinotest function.",
+   "head": "[{\"name\": \"dinotest\", \"arguments\": {\"num\": \"1\"}}, {\"name\": \"dinotest\", \"arguments\": {\"num\": \"2\"}}]"
+  },
+  {
+   "i": 6,
+   "expected": "linear_regression_prediction",
+   "got": null,
+   "ok": false,
+   "time_s": 5.4,
+   "query": "Predict the y-value for x = 10 using linear regression with the given data points: [(1, 3), (2, 6), (3, 9), (4, 12), (5,",
+   "head": "[{\"name\": \"linear_regression_prediction\", \"arguments\": {\"x_values\": [1, 2, 3, 4, 5], \"y_values\": [3, 6, 9, 12, 15], \"target_x\": 10}}]"
+  },
+  {
+   "i": 7,
+   "expected": "is_anagram_phrase",
+   "got": "is_anagram_phrase",
+   "ok": true,
+   "time_s": 3.28,
+   "query": "Check if 'Clint Eastwood' and 'Old West Action' are anagrams, ignoring case and whitespace.",
+   "head": "[{\"name\": \"is_anagram_phrase\", \"arguments\": {\"phrase1\": \"Clint Eastwood\", \"phrase2\": \"Old West Action\"}}]"
+  },
+  {
+   "i": 8,
+   "expected": "earnings_history",
+   "got": "earnings_history",
+   "ok": true,
+   "time_s": 2.32,
+   "query": "Fetch the earnings history for Apple Inc. using its stock ticker 'AAPL'.",
+   "head": "[{\"name\": \"earnings_history\", \"arguments\": {\"ticker\": \"AAPL\"}}]"
+  },
+  {
+   "i": 9,
+   "expected": "auto_complete",
+   "got": "auto_complete",
+   "ok": true,
+   "time_s": 5.71,
+   "query": "Get auto-complete suggestions for the word 'dress' and detailed information for a product with ID '123456' both in US do",
+   "head": "[{\"name\": \"auto_complete\", \"arguments\": {\"word\": \"dress\", \"currency\": \"USD\", \"language\": \"en\"}}, {\"name\": \"products_detail\", \"arguments\": {\"goods_id\": \"123456\","
+  },
+  {
+   "i": 10,
+   "expected": "all_coins_ticker",
+   "got": "all_coins_ticker",
+   "ok": true,
+   "time_s": 4.41,
+   "query": "Fetch the ticker information for the 50th to 100th most popular cryptocurrencies and also get the current block number o",
+   "head": "[{\"name\": \"all_coins_ticker\", \"arguments\": {\"start\": 50, \"limit\": 50}}, {\"name\": \"current_block_number\", \"arguments\": {\"network\": \"mainnet\"}}]"
+  },
+  {
+   "i": 11,
+   "expected": "draw_cards",
+   "got": "draw_cards",
+   "ok": true,
+   "time_s": 4.41,
+   "query": "I want to draw 5 cards from a shuffled deck. Also, can you tell me the GCD of 81 and 153?",
+   "head": "[{\"name\": \"draw_cards\", \"arguments\": {\"num_draw\": 5}}, {\"name\": \"greatest_common_divisor\", \"arguments\": {\"a\": 81, \"b\": 153}}]"
+  },
+  {
+   "i": 12,
+   "expected": "search",
+   "got": "search",
+   "ok": true,
+   "time_s": 4.05,
+   "query": "What are the top-rated laptops on sale with a maximum price of $1000?",
+   "head": "[{\"name\": \"search\", \"arguments\": {\"q\": \"laptops\", \"min_rating\": \"4\", \"on_sale\": true, \"max_price\": 1000, \"sort_by\": \"TOP_RATED\"}}]"
+  },
+  {
+   "i": 13,
+   "expected": "calculate_factorial",
+   "got": "calculate_factorial",
+   "ok": true,
+   "time_s": 3.42,
+   "query": "What is the factorial of 3 and how many vowels are there in the sentence 'Natural Language Processing is interesting.'?",
+   "head": "[{\"name\": \"calculate_factorial\", \"arguments\": {\"n\": 3}}, {\"name\": \"count_vowels\", \"arguments\": {\"text\": \"Natural Language Processing is interesting.\"}}]"
+  },
+  {
+   "i": 14,
+   "expected": "topic",
+   "got": "topic",
+   "ok": true,
+   "time_s": 3.82,
+   "query": "Search for topics containing the keyword 'inspiration' from the Quotes Diffusion API and fetch the entry list of the 'fu",
+   "head": "[{\"name\": \"topic\", \"arguments\": {\"search\": \"inspiration\"}}, {\"name\": \"tsv4\", \"arguments\": {\"subset\": \"funny_quotes\", \"dataset\": \"humor_dataset\"}}]"
+  },
+  {
+   "i": 15,
+   "expected": "quotes_get_mashup",
+   "got": "quotes_get_mashup",
+   "ok": true,
+   "time_s": 3.82,
+   "query": "Fetch additional information for the market quote symbol 'AMZN'. Also, retrieve historical stock prices for 'AMZN' over ",
+   "head": "[{\"name\": \"quotes_get_mashup\", \"arguments\": {\"symbol\": \"AMZN\"}}, {\"name\": \"history_prices\", \"arguments\": {\"symbol\": \"AMZN\", \"range\": \"max\"}}]"
+  },
+  {
+   "i": 16,
+   "expected": "sort_numbers",
+   "got": "wire_resistance",
+   "ok": false,
+   "time_s": 7.21,
+   "query": "I have a list of numbers [2.718, 3.1415, 1.414, 0.577] that I want to sort in ascending order. I also want to find the r",
+   "head": "[{\"name\": \"sort_numbers\", \"arguments\": {\"numbers\": [2.718, 3.1415, 1.414, 0.577], \"descending\": false}}, {\"name\": \"wire_resistance\", \"arguments\": {\"length_m\": 2"
+  },
+  {
+   "i": 17,
+   "expected": "time",
+   "got": "time",
+   "ok": true,
+   "time_s": 4.5,
+   "query": "Retrieve the time token for 'timeInfo1', 'timeInfo2', and 'timeInfo3' from the PubNub Network.",
+   "head": "[{\"name\": \"time\", \"arguments\": {\"callback\": \"timeInfo1\"}}, {\"name\": \"time\", \"arguments\": {\"callback\": \"timeInfo2\"}}, {\"name\": \"time\", \"arguments\": {\"callback\": "
+  },
+  {
+   "i": 18,
+   "expected": "find_duplicate_number",
+   "got": "generate_random_string",
+   "ok": false,
+   "time_s": 5.96,
+   "query": "Find the duplicate number in the list [2, 1, 2, 3, 4] and generate a random string of length 12 with uppercase, digits, ",
+   "head": "[{\"name\": \"find_duplicate_number\", \"arguments\": {\"nums\": [2, 1, 2, 3, 4]}}, {\"name\": \"generate_random_string\", \"arguments\": {\"length\": 12, \"uppercase\": true, \"l"
+  },
+  {
+   "i": 19,
+   "expected": "dice_roll_probability",
+   "got": "dice_roll_probability",
+   "ok": true,
+   "time_s": 5.34,
+   "query": "What is the probability of rolling a sum of 7 with 2 dice, each having 6 faces? Also, calculate the probability of getti",
+   "head": "[{\"name\": \"dice_roll_probability\", \"arguments\": {\"target_sum\": 7, \"num_dice\": 2, \"num_faces\": 6}}, {\"name\": \"binomial_probability\", \"arguments\": {\"n\": 5, \"k\": 3"
+  },
+  {
+   "i": 20,
+   "expected": "calculate_median",
+   "got": null,
+   "ok": false,
+   "time_s": 3.08,
+   "query": "Calculate the median for the set of numbers: 7, 14, 21, 28, 35.",
+   "head": "[{\"name\": \"calculate_median\", \"arguments\": {\"numbers\": [7, 14, 21, 28, 35]}}]"
+  },
+  {
+   "i": 21,
+   "expected": "probability_of_consecutive_rolls",
+   "got": "probability_of_consecutive_rolls",
+   "ok": true,
+   "time_s": 3.38,
+   "query": "What is the probability of rolling a 1 on a four-sided die 2 times consecutively?",
+   "head": "[{\"name\": \"probability_of_consecutive_rolls\", \"arguments\": {\"target_value\": 1, \"num_rolls\": 2, \"num_sides\": 4}}]"
+  },
+  {
+   "i": 22,
+   "expected": "find_pairs_with_sum",
+   "got": null,
+   "ok": false,
+   "time_s": 3.38,
+   "query": "Find all pairs in the list [1, 2, 3, 4, 5] that sum up to 5.",
+   "head": "[{\"name\": \"find_pairs_with_sum\", \"arguments\": {\"nums\": [1, 2, 3, 4, 5], \"target\": 5}}]"
+  },
+  {
+   "i": 23,
+   "expected": "ticker",
+   "got": "ticker",
+   "ok": true,
+   "time_s": 3.48,
+   "query": "Fetch financial data for the NASDAQ stock ABNB and the cryptocurrency XRP-USD.",
+   "head": "[{\"name\": \"ticker\", \"arguments\": {\"t\": \"ABNB:NASDAQ\"}}, {\"name\": \"ticker\", \"arguments\": {\"t\": \"XRP-USD\"}}]"
+  },
+  {
+   "i": 24,
+   "expected": "search_autocomplete_api",
+   "got": "search_autocomplete_api",
+   "ok": true,
+   "time_s": 2.06,
+   "query": "What locations match the Canadian postal code 'G2J'? What is the astronomical data available for this location on Decemb",
+   "head": "[{\"name\": \"search_autocomplete_api\", \"arguments\": {\"q\": \"G2J\"}}]"
+  },
+  {
+   "i": 25,
+   "expected": "resort_view",
+   "got": "resort_view",
+   "ok": true,
+   "time_s": 5.63,
+   "query": "I need information on resorts 'SKI004', 'SKI005', and 'SKI006'. Are there any special conditions at these locations?",
+   "head": "[{\"name\": \"resort_view\", \"arguments\": {\"is_id\": \"SKI004\"}}, {\"name\": \"resort_view\", \"arguments\": {\"is_id\": \"SKI005\"}}, {\"name\": \"resort_view\", \"arguments\": {\"is"
+  },
+  {
+   "i": 26,
+   "expected": "get_sessions",
+   "got": "get_sessions",
+   "ok": true,
+   "time_s": 5.13,
+   "query": "I'm interested in finding chat sessions for a character with ID 'abc123' and I want to retrieve 10 sessions per page sta",
+   "head": "[{\"name\": \"get_sessions\", \"arguments\": {\"character_id\": \"abc123\", \"page_size\": 10, \"page\": 2}}, {\"name\": \"get_sessions\", \"arguments\": {\"character_id\": \"def456\","
+  },
+  {
+   "i": 27,
+   "expected": "get_extra_character_details",
+   "got": "get_extra_character_details",
+   "ok": true,
+   "time_s": 2.27,
+   "query": "Get details for character 'SUPPORT012'.",
+   "head": "[{\"name\": \"get_extra_character_details\", \"arguments\": {\"is_id\": \"SUPPORT012\"}}]"
+  },
+  {
+   "i": 28,
+   "expected": "calculate_calorie_intake",
+   "got": "calculate_calorie_intake",
+   "ok": true,
+   "time_s": 5.02,
+   "query": "Calculate the calorie intake for a 30-year-old male, weighing 75 kg, 180 cm tall, with an active lifestyle aiming to mai",
+   "head": "[{\"name\": \"calculate_calorie_intake\", \"arguments\": {\"weight_kg\": 75, \"height_cm\": 180, \"age\": 30, \"sex\": \"male\", \"activity_level\": 4, \"goal\": \"maintain\"}}]"
+  },
+  {
+   "i": 29,
+   "expected": "generate_password",
+   "got": null,
+   "ok": false,
+   "time_s": 4.83,
+   "query": "Generate a password of length 15 that includes special characters. Additionally, flatten the list [[1, 2], [3, [4, 5]], ",
+   "head": "[{\"name\": \"generate_password\", \"arguments\": {\"length\": 15, \"include_special\": true}}, {\"name\": \"flatten_list\", \"arguments\": {\"nested_list\": [[1, 2], [3, [4, 5]]"
+  },
+  {
+   "i": 30,
+   "expected": "future_investment_value",
+   "got": "future_investment_value",
+   "ok": true,
+   "time_s": 3.64,
+   "query": "Determine the future value of an investment of $10000 with an annual interest rate of 3% over 10 years.",
+   "head": "[{\"name\": \"future_investment_value\", \"arguments\": {\"present_value\": 10000, \"annual_interest_rate\": 0.03, \"years\": 10}}]"
+  },
+  {
+   "i": 31,
+   "expected": "daily_forecast_5_days",
+   "got": "daily_forecast_5_days",
+   "ok": true,
+   "time_s": 3.38,
+   "query": "What are the weather conditions expected in Mumbai over the next five days?",
+   "head": "[{\"name\": \"daily_forecast_5_days\", \"arguments\": {\"latitude\": \"19.0760\", \"longitude\": \"72.8777\"}}]"
+  },
+  {
+   "i": 32,
+   "expected": "calculate_quarterly_dividend",
+   "got": null,
+   "ok": false,
+   "time_s": 6.99,
+   "query": "Calculate the quarterly dividend for a company with $150,000 total dividend and 75,000 shares. Additionally, create a hi",
+   "head": "[{\"name\": \"calculate_quarterly_dividend\", \"arguments\": {\"total_dividend\": 150000, \"num_shares\": 75000}}, {\"name\": \"create_histogram\", \"arguments\": {\"data\": [5, "
+  },
+  {
+   "i": 33,
+   "expected": "stochrsi",
+   "got": "stochrsi",
+   "ok": true,
+   "time_s": 3.05,
+   "query": "Calculate the Stochastic RSI for the S&P 500 index (SPX) with a series type of 'open' and a fast D period of 6.",
+   "head": "[{\"name\": \"stochrsi\", \"arguments\": {\"symbol\": \"SPX\", \"series_type\": \"open\", \"fast_d_period\": 6}}]"
+  },
+  {
+   "i": 34,
+   "expected": "search_suggestions",
+   "got": "search_suggestions",
+   "ok": true,
+   "time_s": 1.84,
+   "query": "Fetch search suggestions for 'tech gadgets'.",
+   "head": "[{\"name\": \"search_suggestions\", \"arguments\": {\"q\": \"tech gadgets\"}}]"
+  },
+  {
+   "i": 35,
+   "expected": "scraper",
+   "got": "scraper",
+   "ok": true,
+   "time_s": 4.11,
+   "query": "Can you scrape the 'h1' tag content from https://www.example.com and convert the number 12345 to Spanish words?",
+   "head": "[{\"name\": \"scraper\", \"arguments\": {\"url\": \"https://www.example.com\", \"selector\": \"h1\"}}, {\"name\": \"nal_query\", \"arguments\": {\"num\": \"12345\"}}]"
+  },
+  {
+   "i": 36,
+   "expected": "std_deviation",
+   "got": null,
+   "ok": false,
+   "time_s": 3.11,
+   "query": "Calculate the standard deviation of the numbers [3.5, 4.5, 5.5, 6.5].",
+   "head": "[{\"name\": \"std_deviation\", \"arguments\": {\"numbers\": [3.5, 4.5, 5.5, 6.5]}}]"
+  },
+  {
+   "i": 37,
+   "expected": "find_kth_smallest_number",
+   "got": null,
+   "ok": false,
+   "time_s": 3.31,
+   "query": "What is the 3rd smallest number in the list [5, 2, 9, 1, 7]?",
+   "head": "[{\"name\": \"find_kth_smallest_number\", \"arguments\": {\"nums\": [5, 2, 9, 1, 7], \"k\": 3}}]"
+  },
+  {
+   "i": 38,
+   "expected": "routing",
+   "got": "routing",
+   "ok": true,
+   "time_s": 6.95,
+   "query": "Create a bike route from the Louvre to Notre Dame in Paris with instructions in French and a GPX file output.",
+   "head": "[{\"name\": \"routing\", \"arguments\": {\"points\": \"48.860611,2.337644|48.852968,2.349902\", \"routetype\": \"bike\", \"language\": \"fr\", \"format\": \"gpx\", \"filename\": \"louvr"
+  },
+  {
+   "i": 39,
+   "expected": "generate_random_string",
+   "got": "generate_random_string",
+   "ok": true,
+   "time_s": 5.08,
+   "query": "Please make me a random string of 12 chars long with all character types. By the way, I also need to know the first non-",
+   "head": "[{\"name\": \"generate_random_string\", \"arguments\": {\"length\": 12, \"uppercase\": true, \"lowercase\": true, \"digits\": true, \"special_chars\": true}}, {\"name\": \"find_fi"
+  },
+  {
+   "i": 40,
+   "expected": "hashtag_metadata_information",
+   "got": "hashtag_metadata_information",
+   "ok": true,
+   "time_s": 1.92,
+   "query": "How many posts are there in social media platforms associated with the hashtag 'travel'?",
+   "head": "[{\"name\": \"hashtag_metadata_information\", \"arguments\": {\"hashtag\": \"travel\"}}]"
+  },
+  {
+   "i": 41,
+   "expected": "cci",
+   "got": "cci",
+   "ok": true,
+   "time_s": 3.39,
+   "query": "Could you fetch the Commodity Channel Index for AAPL stock over the last 60 data points using a 15min interval and a tim",
+   "head": "[{\"name\": \"cci\", \"arguments\": {\"symbol\": \"AAPL\", \"interval\": \"15min\", \"outputsize\": 60, \"time_period\": 10}}]"
+  },
+  {
+   "i": 42,
+   "expected": "getrandomuser",
+   "got": "getrandomuser",
+   "ok": true,
+   "time_s": 1.74,
+   "query": "Fetch information of 5 random users and display their usernames and email addresses.",
+   "head": "[{\"name\": \"getrandomuser\", \"arguments\": {\"count\": 5}}]"
+  },
+  {
+   "i": 43,
+   "expected": "assess_diabetes_risk",
+   "got": "assess_diabetes_risk",
+   "ok": true,
+   "time_s": 6.19,
+   "query": "Assess the diabetes risk for a person who weighs 150 pounds, is 65 inches tall, and is very active. Also, analyze the so",
+   "head": "[{\"name\": \"assess_diabetes_risk\", \"arguments\": {\"weight_lbs\": 150, \"height_inches\": 65, \"activity\": \"very active\"}}, {\"name\": \"analyze_social_group_dynamics\", \""
+  },
+  {
+   "i": 44,
+   "expected": "is_hotel_available",
+   "got": "is_hotel_available",
+   "ok": true,
+   "time_s": 4.71,
+   "query": "Check if the Queens Hotel in Berlin is available from 2022-03-12 to 2022-03-15.",
+   "head": "[{\"name\": \"is_hotel_available\", \"arguments\": {\"hotel\": \"Queens Hotel\", \"city\": \"Berlin\", \"checkin\": \"2022-03-12\", \"checkout\": \"2022-03-15\"}}]"
+  },
+  {
+   "i": 45,
+   "expected": "search_places",
+   "got": "search_places",
+   "ok": true,
+   "time_s": 3.44,
+   "query": "Find cities in the US and Canada with names similar to 'Springfield' and return up to 20 results.",
+   "head": "[{\"name\": \"search_places\", \"arguments\": {\"q\": \"Springfield\", \"type\": \"CITY\", \"country\": \"US,CA\", \"limit\": 20}}]"
+  },
+  {
+   "i": 46,
+   "expected": "v1_holidays",
+   "got": "v1_holidays",
+   "ok": true,
+   "time_s": 9.27,
+   "query": "Fetch the list of optional holidays in Italy for the year 2016. Also, find out the event details for the identifier '444",
+   "head": "[{\"name\": \"v1_holidays\", \"arguments\": {\"year\": 2016, \"country\": \"it\", \"type\": \"optional_holiday\"}}, {\"name\": \"get_specific_event_information\", \"arguments\": {\"ev"
+  },
+  {
+   "i": 47,
+   "expected": "random_profiles",
+   "got": "random_profiles",
+   "ok": true,
+   "time_s": 1.58,
+   "query": "Generate 10 fake user profiles using the Toolbench RapidAPI service.",
+   "head": "[{\"name\": \"random_profiles\", \"arguments\": {\"size\": \"10\"}}]"
+  },
+  {
+   "i": 48,
+   "expected": "get_pokemon_move_info",
+   "got": "get_pokemon_move_info",
+   "ok": true,
+   "time_s": 2.0,
+   "query": "What moves can Charmander learn?",
+   "head": "[{\"name\": \"get_pokemon_move_info\", \"arguments\": {\"pokemon_name\": \"Charmander\"}}]"
+  },
+  {
+   "i": 49,
+   "expected": "balance_sheet_statement",
+   "got": "balance_sheet_statement",
+   "ok": true,
+   "time_s": 5.48,
+   "query": "Retrieve the balance sheet statement of Tesla Inc. (TSLA) and get the Parabolic SAR data for Bitcoin (BTC) in the crypto",
+   "head": "[{\"name\": \"balance_sheet_statement\", \"arguments\": {\"ticker\": \"TSLA\"}}, {\"name\": \"sar\", \"arguments\": {\"symbol\": \"BTC\", \"interval\": \"1week\"}}, {\"name\": \"stock_tim"
+  },
+  {
+   "i": 50,
+   "expected": "titles_id_aka",
+   "got": "titles_id_aka",
+   "ok": true,
+   "time_s": 4.45,
+   "query": "I'm looking for the alternative titles of the movie with IMDb ID 'tt0110912'. Can you also find the main actors in the m",
+   "head": "[{\"name\": \"titles_id_aka\", \"arguments\": {\"is_id\": \"tt0110912\"}}, {\"name\": \"titles_id_main_actors\", \"arguments\": {\"is_id\": \"tt0111161\"}}]"
+  },
+  {
+   "i": 51,
+   "expected": "live_room_bio",
+   "got": "live_room_bio",
+   "ok": true,
+   "time_s": 3.49,
+   "query": "What are the biographies for 'UrbanJungle' and 'CosmicDreams' live rooms?",
+   "head": "[{\"name\": \"live_room_bio\", \"arguments\": {\"name\": \"UrbanJungle\"}}, {\"name\": \"live_room_bio\", \"arguments\": {\"name\": \"CosmicDreams\"}}]"
+  },
+  {
+   "i": 52,
+   "expected": "search_suggestions",
+   "got": "search_suggestions",
+   "ok": true,
+   "time_s": 4.65,
+   "query": "Get search suggestions for the query 'climate change' on Twitter and media information for the Instagram post at 'https:",
+   "head": "[{\"name\": \"search_suggestions\", \"arguments\": {\"query\": \"climate change\"}}, {\"name\": \"get_media_info_by_url\", \"arguments\": {\"link\": \"https://www.instagram.com/p/"
+  },
+  {
+   "i": 53,
+   "expected": "get_language_by_id",
+   "got": "get_language_by_id",
+   "ok": true,
+   "time_s": 3.98,
+   "query": "I'm looking for the language with ID 394041. Can you also tell me about the language with ID forty two thousand, four hu",
+   "head": "[{\"name\": \"get_language_by_id\", \"arguments\": {\"language_id\": 394041}}, {\"name\": \"get_language_by_id\", \"arguments\": {\"language_id\": 42443}}]"
+  },
+  {
+   "i": 54,
+   "expected": "final_velocity",
+   "got": "final_velocity",
+   "ok": true,
+   "time_s": 4.6,
+   "query": "Calculate the final velocity of a skateboard starting at 0 m/s, accelerating at 2 m/s\u00b2 for 15 seconds. Also, how many pe",
+   "head": "[{\"name\": \"final_velocity\", \"arguments\": {\"initial_velocity\": 0, \"acceleration\": 2, \"time\": 15}}, {\"name\": \"permutation_count\", \"arguments\": {\"n\": 18, \"k\": 6}}]"
+  },
+  {
+   "i": 55,
+   "expected": "get_2_thumbnail_ready",
+   "got": "get_2_thumbnail_ready",
+   "ok": true,
+   "time_s": 4.21,
+   "query": "Generate a small thumbnail from the URL https://yet-another-example.com and convert 750 to its Spanish word equivalent.",
+   "head": "[{\"name\": \"get_2_thumbnail_ready\", \"arguments\": {\"size\": \"s\", \"url\": \"https://yet-another-example.com\"}}, {\"name\": \"nal_query\", \"arguments\": {\"num\": \"750\"}}]"
+  },
+  {
+   "i": 56,
+   "expected": "bacterial_growth",
+   "got": "bacterial_growth",
+   "ok": true,
+   "time_s": 3.79,
+   "query": "Calculate the bacterial population after 2 hours given an initial population of 100, a growth rate of 0.5 per hour, and ",
+   "head": "[{\"name\": \"bacterial_growth\", \"arguments\": {\"initial_population\": 100, \"growth_rate\": 0.5, \"time\": 2, \"doubling_time\": 30}}]"
+  },
+  {
+   "i": 57,
+   "expected": "reverse_string",
+   "got": "reverse_string",
+   "ok": true,
+   "time_s": 5.42,
+   "query": "Reverse the phrase 'data science' and merge these dictionaries: {'x': 10, 'y': 20} and {'y': 30, 'z': 40}.",
+   "head": "[{\"name\": \"reverse_string\", \"arguments\": {\"text\": \"data science\"}}, {\"name\": \"merge_dictionaries\", \"arguments\": {\"dict1\": {\"x\": 10, \"y\": 20}, \"dict2\": {\"y\": 30,"
+  },
+  {
+   "i": 58,
+   "expected": "is_power",
+   "got": "is_power",
+   "ok": true,
+   "time_s": 2.22,
+   "query": "Check if 128 is a power of 2.",
+   "head": "[{\"name\": \"is_power\", \"arguments\": {\"num\": 128, \"base\": 2}}]"
+  },
+  {
+   "i": 59,
+   "expected": "primeira_liga_standings",
+   "got": "primeira_liga_standings",
+   "ok": true,
+   "time_s": 3.94,
+   "query": "Can you tell me the standings for the 2021 season of Primeira Liga, and who are the managers of the ice hockey match wit",
+   "head": "[{\"name\": \"primeira_liga_standings\", \"arguments\": {\"season\": \"2021\"}}, {\"name\": \"matchmanagers\", \"arguments\": {\"is_id\": 12345}}]"
+  },
+  {
+   "i": 60,
+   "expected": "search",
+   "got": "search",
+   "ok": true,
+   "time_s": 1.6,
+   "query": "Search for videos about climate change on YouTube.",
+   "head": "[{\"name\": \"search\", \"arguments\": {\"q\": \"climate change\"}}]"
+  },
+  {
+   "i": 61,
+   "expected": "binary_addition",
+   "got": null,
+   "ok": false,
+   "time_s": 5.71,
+   "query": "Perform binary addition on '1011' and '1101', and find the minimum in the array [4, 5, 6, 7, 0, 1, 2].",
+   "head": "[{\"name\": \"binary_addition\", \"arguments\": {\"a\": \"1011\", \"b\": \"1101\"}}, {\"name\": \"find_minimum_rotated_sorted_array\", \"arguments\": {\"nums\": [4, 5, 6, 7, 0, 1, 2]"
+  },
+  {
+   "i": 62,
+   "expected": "factorial",
+   "got": "factorial",
+   "ok": true,
+   "time_s": 3.05,
+   "query": "What is the factorial of 5, and what are the prime factors of 28?",
+   "head": "[{\"name\": \"factorial\", \"arguments\": {\"n\": 5}}, {\"name\": \"prime_factorization\", \"arguments\": {\"number\": 28}}]"
+  },
+  {
+   "i": 63,
+   "expected": "get_token_price",
+   "got": "get_token_price",
+   "ok": true,
+   "time_s": 1.49,
+   "query": "What is the current price of the BUSD token on PancakeSwap?",
+   "head": "[{\"name\": \"get_token_price\", \"arguments\": {}}]"
+  },
+  {
+   "i": 64,
+   "expected": "get_by_tvdb_id",
+   "got": "get_by_tvdb_id",
+   "ok": true,
+   "time_s": 4.03,
+   "query": "I need information on the TV show identified by TVDB ID 987654. Also, what's the streaming link for the soccer match wit",
+   "head": "[{\"name\": \"get_by_tvdb_id\", \"arguments\": {\"tv\": 987654}}, {\"name\": \"match_embed_link\", \"arguments\": {\"matchid\": 654321}}]"
+  },
+  {
+   "i": 65,
+   "expected": "get_all_kfc_locations_by_state_and_city",
+   "got": "get_all_kfc_locations_by_state_and_city",
+   "ok": true,
+   "time_s": 6.23,
+   "query": "Find KFC locations in Tennessee, in Nashville on page 1, and in Memphis on page 2.",
+   "head": "[{\"name\": \"get_all_kfc_locations_by_state_and_city\", \"arguments\": {\"state\": \"TN\", \"city\": \"Nashville\", \"page\": 1}}, {\"name\": \"get_all_kfc_locations_by_state_and"
+  },
+  {
+   "i": 66,
+   "expected": "solve_quadratic",
+   "got": "solve_quadratic",
+   "ok": true,
+   "time_s": 2.66,
+   "query": "Solve the quadratic equation 2x^2 + 3x - 5 = 0 and find the palindromic substring from the roots in the string 'rootroot",
+   "head": "[{\"name\": \"solve_quadratic\", \"arguments\": {\"a\": 2, \"b\": 3, \"c\": -5}}]"
+  },
+  {
+   "i": 67,
+   "expected": "get_user_follower_list",
+   "got": "get_user_follower_list",
+   "ok": true,
+   "time_s": 3.27,
+   "query": "I need to get the follower list for the TikTok user with the ID '6663143406158520325'.",
+   "head": "[{\"name\": \"get_user_follower_list\", \"arguments\": {\"user_id\": \"6663143406158520325\"}}]"
+  },
+  {
+   "i": 68,
+   "expected": "monthly_mortgage_payment",
+   "got": "monthly_mortgage_payment",
+   "ok": true,
+   "time_s": 3.98,
+   "query": "If I borrow $350,000 with an annual interest rate of 3.5% over a 15-year term, what would be my monthly mortgage payment",
+   "head": "[{\"name\": \"monthly_mortgage_payment\", \"arguments\": {\"loan_amount\": 350000, \"annual_interest_rate\": 0.035, \"loan_term_years\": 15}}]"
+  },
+  {
+   "i": 69,
+   "expected": "financial_cash_statement",
+   "got": "financial_cash_statement",
+   "ok": true,
+   "time_s": 2.81,
+   "query": "Retrieve the financial cash statement data for the ticker symbol 'AAPL' over the past 10 years in a dataframe format wit",
+   "head": "[{\"name\": \"financial_cash_statement\", \"arguments\": {\"symbol\": \"AAPL\", \"formstyle\": \"dataframe\", \"freq\": \"Q\"}}]"
+  },
+  {
+   "i": 70,
+   "expected": "is_prime",
+   "got": null,
+   "ok": false,
+   "time_s": 6.51,
+   "query": "Are 29 and 37 prime numbers? Also, find a peak in the list [10, 20, 30, 40, 50, 60, 70].",
+   "head": "[{\"name\": \"is_prime\", \"arguments\": {\"num\": 29}}, {\"name\": \"is_prime\", \"arguments\": {\"num\": 37}}, {\"name\": \"find_peak_element\", \"arguments\": {\"nums\": [10, 20, 30"
+  },
+  {
+   "i": 71,
+   "expected": "profile_image",
+   "got": "profile_image",
+   "ok": true,
+   "time_s": 3.03,
+   "query": "Generate profile images for names 'Alice' and 'Bob'.",
+   "head": "[{\"name\": \"profile_image\", \"arguments\": {\"name\": \"Alice\"}}, {\"name\": \"profile_image\", \"arguments\": {\"name\": \"Bob\"}}]"
+  },
+  {
+   "i": 72,
+   "expected": "ublacklist_txt",
+   "got": "ublacklist_txt",
+   "ok": true,
+   "time_s": 4.79,
+   "query": "Get the ublacklist.txt data for Roblox, and search for countries in Europe with a focus on their latitude and longitude,",
+   "head": "[{\"name\": \"ublacklist_txt\", \"arguments\": {\"game\": \"roblox\"}}, {\"name\": \"search_countries_by_continent\", \"arguments\": {\"continent\": \"Europe\", \"fields\": \"latitude"
+  },
+  {
+   "i": 73,
+   "expected": "v1_weather",
+   "got": "v1_weather",
+   "ok": true,
+   "time_s": 2.01,
+   "query": "I'm curious about the weather in my hometown, which has the zip code 98101. Can you find the weather information for me?",
+   "head": "[{\"name\": \"v1_weather\", \"arguments\": {\"zip\": 98101}}]"
+  },
+  {
+   "i": 74,
+   "expected": "wire_resistance",
+   "got": "note_duration",
+   "ok": false,
+   "time_s": 9.7,
+   "query": "Compute the resistance of a copper wire 25 meters long with a cross-sectional area of 0.0002 square meters. Find the 2nd",
+   "head": "[{\"name\": \"wire_resistance\", \"arguments\": {\"length_m\": 25, \"area_sq_m\": 0.0002, \"material\": \"copper\"}}, {\"name\": \"find_kth_smallest_number\", \"arguments\": {\"nums"
+  },
+  {
+   "i": 75,
+   "expected": "feedbacks_id",
+   "got": "feedbacks_id",
+   "ok": true,
+   "time_s": 7.12,
+   "query": "Fetch the feedbacks for a product with ID 6162636465 from AliExpress, without pictures and from the first page. Get the ",
+   "head": "[{\"name\": \"feedbacks_id\", \"arguments\": {\"is_id\": 6162636465, \"withpictures\": 0, \"page\": 1}}, {\"name\": \"details\", \"arguments\": {\"creator_id\": 6667686970}}, {\"nam"
+  },
+  {
+   "i": 76,
+   "expected": "getallcountry",
+   "got": "getallcountry",
+   "ok": true,
+   "time_s": 3.32,
+   "query": "List the country names in ascending order and tell me the latest releases in the US.",
+   "head": "[{\"name\": \"getallcountry\", \"arguments\": {\"order\": \"ASC\"}}, {\"name\": \"new_releases\", \"arguments\": {\"country\": \"US\"}}]"
+  },
+  {
+   "i": 77,
+   "expected": "search_by_company_name",
+   "got": "search_by_company_name",
+   "ok": true,
+   "time_s": 1.96,
+   "query": "Can you find any information about the company called 'Green Solutions' in the Uganda company register?",
+   "head": "[{\"name\": \"search_by_company_name\", \"arguments\": {\"name\": \"Green Solutions\"}}]"
+  },
+  {
+   "i": 78,
+   "expected": "generate_random_string",
+   "got": "generate_random_string",
+   "ok": true,
+   "time_s": 3.65,
+   "query": "Generate a 3-character string with only digits.",
+   "head": "[{\"name\": \"generate_random_string\", \"arguments\": {\"length\": 3, \"uppercase\": false, \"lowercase\": false, \"digits\": true, \"special_chars\": false}}]"
+  },
+  {
+   "i": 79,
+   "expected": "get_teams_and_players",
+   "got": "get_teams_and_players",
+   "ok": true,
+   "time_s": 4.27,
+   "query": "Could you find the teams and players in the League of Legends Esports for the team with ID 'lng-esports'? Also, what's t",
+   "head": "[{\"name\": \"get_teams_and_players\", \"arguments\": {\"is_id\": \"lng-esports\"}}, {\"name\": \"get_username_point_blank\", \"arguments\": {\"is_id\": \"PB987654\"}}]"
+  },
+  {
+   "i": 80,
+   "expected": "calculate_standard_deviation",
+   "got": null,
+   "ok": false,
+   "time_s": 6.78,
+   "query": "Calculate the standard deviation for the list of numbers [1.5, 2.5, 3.5, 4.5, 5.5] and also determine if a person can at",
+   "head": "[{\"name\": \"std_deviation\", \"arguments\": {\"numbers\": [1.5, 2.5, 3.5, 4.5, 5.5]}}, {\"name\": \"can_attend_all_meetings\", \"arguments\": {\"intervals\": [[1, 2], [4, 5],"
+  },
+  {
+   "i": 81,
+   "expected": "business_delta",
+   "got": "business_delta",
+   "ok": true,
+   "time_s": 3.77,
+   "query": "How many business days are there between my birthday and my friend's birthday? My birthday is on May 5, 2022 and my frie",
+   "head": "[{\"name\": \"business_delta\", \"arguments\": {\"first_date\": \"2022-05-05\", \"second_date\": \"2022-06-10\"}}]"
+  },
+  {
+   "i": 82,
+   "expected": "order_by_descending",
+   "got": "order_by_descending",
+   "ok": true,
+   "time_s": 5.14,
+   "query": "Can you provide the top 5 most popular cat breeds and the locations of restaurants on pages 1 and 2?",
+   "head": "[{\"name\": \"order_by_descending\", \"arguments\": {\"ordering\": \"-popularity\"}}, {\"name\": \"get_all_restaurant_locations\", \"arguments\": {\"page\": 1}}, {\"name\": \"get_al"
+  },
+  {
+   "i": 83,
+   "expected": "youtube_search",
+   "got": "youtube_search",
+   "ok": true,
+   "time_s": 4.29,
+   "query": "Search YouTube for 'vegan recipes' in French and retrieve the comments for TikTok video ID 12345.",
+   "head": "[{\"name\": \"youtube_search\", \"arguments\": {\"query\": \"vegan recipes\", \"lang\": \"fr\"}}, {\"name\": \"video_post_comments\", \"arguments\": {\"video_id\": \"12345\"}}]"
+  },
+  {
+   "i": 84,
+   "expected": "sort_numbers",
+   "got": null,
+   "ok": false,
+   "time_s": 3.55,
+   "query": "Sort the list of numbers [10.5, 2.7, 4.3, 7.9, 1.1] in ascending order.",
+   "head": "[{\"name\": \"sort_numbers\", \"arguments\": {\"numbers\": [10.5, 2.7, 4.3, 7.9, 1.1]}}]"
+  },
+  {
+   "i": 85,
+   "expected": "least_common_multiple",
+   "got": null,
+   "ok": false,
+   "time_s": 5.02,
+   "query": "Compute the least common multiple of 12 and 18, and find the Euclidean distance between points A(1, 2) and B(4, 6).",
+   "head": "[{\"name\": \"least_common_multiple\", \"arguments\": {\"a\": 12, \"b\": 18}}, {\"name\": \"euclidean_distance\", \"arguments\": {\"point_a\": [1, 2], \"point_b\": [4, 6]}}]"
+  },
+  {
+   "i": 86,
+   "expected": "match",
+   "got": "match",
+   "ok": true,
+   "time_s": 1.96,
+   "query": "I need the details for the tennis match with match_id 90123. Can you get that for me?",
+   "head": "[{\"name\": \"match\", \"arguments\": {\"match_id\": 90123}}]"
+  },
+  {
+   "i": 87,
+   "expected": "get_search_user",
+   "got": "get_search_user",
+   "ok": true,
+   "time_s": 3.78,
+   "query": "Can you find information about TikTok user 'dance_queen' and also check the sign info for OnlyFans using user agent 'Moz",
+   "head": "[{\"name\": \"get_search_user\", \"arguments\": {\"is_id\": \"dance_queen\"}}, {\"name\": \"sign_info\", \"arguments\": {\"useragent\": \"Mozilla/5.0\"}}]"
+  },
+  {
+   "i": 88,
+   "expected": "is_perfect_square",
+   "got": "is_perfect_square",
+   "ok": true,
+   "time_s": 1.95,
+   "query": "Determine if the number 144 is a perfect square.",
+   "head": "[{\"name\": \"is_perfect_square\", \"arguments\": {\"num\": 144}}]"
+  },
+  {
+   "i": 89,
+   "expected": "search",
+   "got": "search",
+   "ok": true,
+   "time_s": 2.37,
+   "query": "I'm looking for a person named Jane Smith in the IT industry on LinkedIn.",
+   "head": "[{\"name\": \"search\", \"arguments\": {\"query\": \"Jane Smith IT industry\", \"type\": \"person\"}}]"
+  },
+  {
+   "i": 90,
+   "expected": "getuservideos",
+   "got": "getuservideos",
+   "ok": true,
+   "time_s": 7.43,
+   "query": "Find the most recent 5 user-generated videos that have been publicly shared to YouTube. Then, retrieve the most recent 1",
+   "head": "[{\"name\": \"getuservideos\", \"arguments\": {\"num\": 5}}, {\"name\": \"getuservideos\", \"arguments\": {\"num\": 10, \"since\": \"2021-01-01T00:00:00Z\"}}, {\"name\": \"getuservide"
+  },
+  {
+   "i": 91,
+   "expected": "time_zone_api",
+   "got": "time_zone_api",
+   "ok": true,
+   "time_s": 2.63,
+   "query": "Fetch time zone details for an IP address 100.0.0.1 and a Canada postal code G2J.",
+   "head": "[{\"name\": \"time_zone_api\", \"arguments\": {\"q\": \"ip=100.0.0.1\"}}]"
+  },
+  {
+   "i": 92,
+   "expected": "find_longest_word",
+   "got": "is_valid_parentheses",
+   "ok": false,
+   "time_s": 4.49,
+   "query": "I'm looking for the longest word in the list: ['dog', 'elephant', 'cat', 'giraffe']. By the way, do you know if '(()' ha",
+   "head": "[{\"name\": \"find_longest_word\", \"arguments\": {\"words\": [\"dog\", \"elephant\", \"cat\", \"giraffe\"]}}, {\"name\": \"is_valid_parentheses\", \"arguments\": {\"s\": \"(()\"}}]"
+  },
+  {
+   "i": 93,
+   "expected": "getgamelist",
+   "got": "getgamelist",
+   "ok": true,
+   "time_s": 3.25,
+   "query": "Get the list of games from the EvoSiss Game Database API for page number 1, and fetch the latest 50 clips of the Twitch ",
+   "head": "[{\"name\": \"getgamelist\", \"arguments\": {\"page\": 1}}, {\"name\": \"get_clips\", \"arguments\": {\"name\": \"Shroud\"}}]"
+  },
+  {
+   "i": 94,
+   "expected": "random_credit_card_by_id",
+   "got": "random_credit_card_by_id",
+   "ok": true,
+   "time_s": 2.26,
+   "query": "Generate a random credit card for user ID 100 and provide the details.",
+   "head": "[{\"name\": \"random_credit_card_by_id\", \"arguments\": {\"is_id\": 100}}]"
+  },
+  {
+   "i": 95,
+   "expected": "get_order",
+   "got": "get_order",
+   "ok": true,
+   "time_s": 2.58,
+   "query": "Find the details of the order with ID 'ORD987654321'.",
+   "head": "[{\"name\": \"get_order\", \"arguments\": {\"is_id\": \"ORD987654321\"}}]"
+  },
+  {
+   "i": 96,
+   "expected": "predict_evolution_rate",
+   "got": "predict_evolution_rate",
+   "ok": true,
+   "time_s": 10.52,
+   "query": "I'm writing a paper on evolutionary biology and need to predict the evolutionary rate of the Galapagos tortoise over the",
+   "head": "[{\"name\": \"predict_evolution_rate\", \"arguments\": {\"species\": \"Galapagos tortoise\", \"years\": 50, \"model\": \"Darwin\"}}, {\"name\": \"predict_evolution_rate\", \"argumen"
+  },
+  {
+   "i": 97,
+   "expected": "specific_skin",
+   "got": "specific_skin",
+   "ok": true,
+   "time_s": 2.2,
+   "query": "I need details about the 'AK-47_Redline' skin in Counter-Strike.",
+   "head": "[{\"name\": \"specific_skin\", \"arguments\": {\"skin_name\": \"AK-47_Redline\"}}]"
+  },
+  {
+   "i": 98,
+   "expected": "is_power_of_two",
+   "got": "is_power_of_two",
+   "ok": true,
+   "time_s": 2.1,
+   "query": "Is 128 a power of two?",
+   "head": "[{\"name\": \"is_power_of_two\", \"arguments\": {\"num\": 128}}]"
+  },
+  {
+   "i": 99,
+   "expected": "get_ip_location",
+   "got": "get_ip_location",
+   "ok": true,
+   "time_s": 2.34,
+   "query": "What are the coordinates of the IP address 8.8.8.8?",
+   "head": "[{\"name\": \"get_ip_location\", \"arguments\": {\"ip\": \"8.8.8.8\"}}]"
+  },
+  {
+   "i": 100,
+   "expected": "remove_duplicates",
+   "got": "is_anagram",
+   "ok": false,
+   "time_s": 7.04,
+   "query": "Remove duplicates from the list [1, 2, 3, 2, 1]. Also, find the maximum sum of a contiguous subarray within the list of ",
+   "head": "[{\"name\": \"remove_duplicates\", \"arguments\": {\"lst\": [1, 2, 3, 2, 1]}}, {\"name\": \"find_max_subarray_sum\", \"arguments\": {\"nums\": [1, -2, 3, 5, -1]}}, {\"name\": \"is"
+  },
+  {
+   "i": 101,
+   "expected": "get_specific_pizza",
+   "got": "get_specific_pizza",
+   "ok": true,
+   "time_s": 3.61,
+   "query": "What are the details of the pizza with ID 123? Also, provide the best reviews for the restaurant with ID 456.",
+   "head": "[{\"name\": \"get_specific_pizza\", \"arguments\": {\"is_id\": 123}}, {\"name\": \"reviews_list_best\", \"arguments\": {\"id_restaurant\": 456}}]"
+  },
+  {
+   "i": 102,
+   "expected": "district_detail_of_specific_division",
+   "got": "district_detail_of_specific_division",
+   "ok": true,
+   "time_s": 3.9,
+   "query": "Can you tell me about the districts and upazilas in Dhaka division? Also, I need the food hygiene ratings for the restau",
+   "head": "[{\"name\": \"district_detail_of_specific_division\", \"arguments\": {\"division_name\": \"Dhaka\"}}, {\"name\": \"get_ratings_by_restaurant\", \"arguments\": {\"restaurant\": \"T"
+  },
+  {
+   "i": 103,
+   "expected": "child_comments",
+   "got": "child_comments",
+   "ok": true,
+   "time_s": 7.24,
+   "query": "I want to see the child comments for a comment with ID 345678 on a media with ID 456789. Additionally, retrieve the chil",
+   "head": "[{\"name\": \"child_comments\", \"arguments\": {\"commentid\": 345678, \"mediaid\": 456789}}, {\"name\": \"child_comments\", \"arguments\": {\"commentid\": 456789, \"mediaid\": 456"
+  },
+  {
+   "i": 104,
+   "expected": "blogs_by_category",
+   "got": "blogs_by_category",
+   "ok": true,
+   "time_s": 6.39,
+   "query": "Get all blogs from the 'Business' category and token forwarding transactions for the identifier 'abc123' with an offset ",
+   "head": "[{\"name\": \"blogs_by_category\", \"arguments\": {\"category\": 5}}, {\"name\": \"get_token_forwarding_transactions\", \"arguments\": {\"is_id\": \"abc123\", \"offset\": 100, \"lim"
+  },
+  {
+   "i": 105,
+   "expected": "predict_evolution_rate",
+   "got": "predict_evolution_rate",
+   "ok": true,
+   "time_s": 3.37,
+   "query": "Predict the evolutionary rate of 'Homo sapiens' over 1000 years using the 'Lamarck' model.",
+   "head": "[{\"name\": \"predict_evolution_rate\", \"arguments\": {\"species\": \"Homo sapiens\", \"years\": 1000, \"model\": \"Lamarck\"}}]"
+  },
+  {
+   "i": 106,
+   "expected": "weather_statistics",
+   "got": "weather_statistics",
+   "ok": true,
+   "time_s": 3.91,
+   "query": "What's the weather like in San Francisco for the next 30 days in imperial units? And what's the local time there?",
+   "head": "[{\"name\": \"weather_statistics\", \"arguments\": {\"units\": \"imperial\", \"place_id\": \"San Francisco\"}}, {\"name\": \"time_zone_api\", \"arguments\": {\"q\": \"San Francisco\"}}"
+  },
+  {
+   "i": 107,
+   "expected": "calculate_card_game_probability",
+   "got": "calculate_card_game_probability",
+   "ok": true,
+   "time_s": 3.0,
+   "query": "What is the probability of drawing 2 aces from a 52-card deck if I draw 5 cards?",
+   "head": "[{\"name\": \"calculate_card_game_probability\", \"arguments\": {\"total_cards\": 52, \"desired_cards\": 4, \"cards_drawn\": 5}}]"
+  },
+  {
+   "i": 108,
+   "expected": "infobox",
+   "got": "infobox",
+   "ok": true,
+   "time_s": 2.76,
+   "query": "Fetch the infobox data for the Wikipedia page of 'Albert Einstein' without including the name in the infobox.",
+   "head": "[{\"name\": \"infobox\", \"arguments\": {\"wikiurl\": \"https://en.wikipedia.org/wiki/Albert_Einstein\", \"withname\": false}}]"
+  },
+  {
+   "i": 109,
+   "expected": "whole_foods_order",
+   "got": null,
+   "ok": false,
+   "time_s": 3.58,
+   "query": "Can you assist with a small order at the Whole Foods in Seattle? I need just a few items: blueberries, oat milk, and gra",
+   "head": "[{\"name\": \"whole_foods_order\", \"arguments\": {\"store_location\": \"Seattle\", \"item_list\": [\"blueberries\", \"oat milk\", \"granola\"], \"order_size\": \"small\"}}]"
+  },
+  {
+   "i": 110,
+   "expected": "search_product",
+   "got": "search_product",
+   "ok": true,
+   "time_s": 5.7,
+   "query": "Please search for a product on Tokopedia using the query 'headphones' and the action 'search'. Also, perform another sea",
+   "head": "[{\"name\": \"search_product\", \"arguments\": {\"query\": \"headphones\", \"act\": \"search\"}}, {\"name\": \"search_product\", \"arguments\": {\"query\": \"camera\", \"act\": \"search\"}"
+  },
+  {
+   "i": 111,
+   "expected": "format_date",
+   "got": "format_date",
+   "ok": true,
+   "time_s": 6.21,
+   "query": "Convert '2023-08-10' from 'YYYY-MM-DD' to 'DD Month YYYY' and merge {'season': 'summer'} and {'weather': 'sunny'}.",
+   "head": "[{\"name\": \"format_date\", \"arguments\": {\"date\": \"2023-08-10\", \"input_format\": \"YYYY-MM-DD\", \"output_format\": \"DD Month YYYY\"}}, {\"name\": \"merge_dictionaries\", \"a"
+  },
+  {
+   "i": 112,
+   "expected": "check_email",
+   "got": "check_email",
+   "ok": true,
+   "time_s": 1.97,
+   "query": "Is my personal email, john.doe@gmail.com, valid?",
+   "head": "[{\"name\": \"check_email\", \"arguments\": {\"email\": \"john.doe@gmail.com\"}}]"
+  },
+  {
+   "i": 113,
+   "expected": "final_velocity",
+   "got": "final_velocity",
+   "ok": true,
+   "time_s": 4.67,
+   "query": "What is the final velocity of a ball thrown upwards at 10 m/s, decelerating due to gravity at 9.8 m/s\u00b2 for 2 seconds? Al",
+   "head": "[{\"name\": \"final_velocity\", \"arguments\": {\"initial_velocity\": 10, \"acceleration\": -9.8, \"time\": 2}}, {\"name\": \"permutation_count\", \"arguments\": {\"n\": 52, \"k\": 5"
+  },
+  {
+   "i": 114,
+   "expected": "std_deviation",
+   "got": "permutation_count",
+   "ok": false,
+   "time_s": 4.85,
+   "query": "Compute the standard deviation for the values [10, 20, 30, 40, 50] and determine the number of permutations of 5 items f",
+   "head": "[{\"name\": \"std_deviation\", \"arguments\": {\"numbers\": [10, 20, 30, 40, 50]}}, {\"name\": \"permutation_count\", \"arguments\": {\"n\": 10, \"k\": 5}}]"
+  },
+  {
+   "i": 115,
+   "expected": "title_get_technical",
+   "got": "title_get_technical",
+   "ok": true,
+   "time_s": 4.48,
+   "query": "I'm curious about the technical details of the movie 'The Matrix' (tt0133093). Also, what about 'Inception' (tt1375666)?",
+   "head": "[{\"name\": \"title_get_technical\", \"arguments\": {\"tconst\": \"tt0133093\"}}, {\"name\": \"title_get_technical\", \"arguments\": {\"tconst\": \"tt1375666\"}}]"
+  },
+  {
+   "i": 116,
+   "expected": "find_max_subarray_sum",
+   "got": null,
+   "ok": false,
+   "time_s": 6.21,
+   "query": "Find the maximum sum of a contiguous subarray in the list [1, 2, 3, -5, 4, -7, 6, 8] and split the list [1, 2, 3, 4, 5] ",
+   "head": "[{\"name\": \"find_max_subarray_sum\", \"arguments\": {\"nums\": [1, 2, 3, -5, 4, -7, 6, 8]}}, {\"name\": \"split_list\", \"arguments\": {\"lst\": [1, 2, 3, 4, 5], \"chunk_size\""
+  },
+  {
+   "i": 117,
+   "expected": "is_prime",
+   "got": "is_prime",
+   "ok": true,
+   "time_s": 4.13,
+   "query": "Is the number 7 a prime number? Also, tell me if 15 and 20 are prime numbers.",
+   "head": "[{\"name\": \"is_prime\", \"arguments\": {\"num\": 7}}, {\"name\": \"is_prime\", \"arguments\": {\"num\": 15}}, {\"name\": \"is_prime\", \"arguments\": {\"num\": 20}}]"
+  },
+  {
+   "i": 118,
+   "expected": "crimes_with_no_location",
+   "got": "crimes_with_no_location",
+   "ok": true,
+   "time_s": 4.86,
+   "query": "What are the crimes with no specified location in category 'burglary' from the 'metropolitan' police force in January 20",
+   "head": "[{\"name\": \"crimes_with_no_location\", \"arguments\": {\"date\": \"2022-01\", \"force\": \"metropolitan\", \"category\": \"burglary\"}}, {\"name\": \"analysis\", \"arguments\": {\"ema"
+  },
+  {
+   "i": 119,
+   "expected": "recent",
+   "got": "recent",
+   "ok": true,
+   "time_s": 4.01,
+   "query": "Can you fetch recent arrests from the Maricopa County Sheriff's Office in Arizona? Also, generate a QR code for the URL ",
+   "head": "[{\"name\": \"recent\", \"arguments\": {\"source_id\": \"az-mcso\"}}, {\"name\": \"qrcode\", \"arguments\": {\"data\": \"https://www.example.com/maricopa_arrests\"}}]"
+  },
+  {
+   "i": 120,
+   "expected": "fan_rating",
+   "got": "fan_rating",
+   "ok": true,
+   "time_s": 3.65,
+   "query": "Retrieve the fan rating for the basketball event with ID 67890 and the esports games details for the event with ID 54321",
+   "head": "[{\"name\": \"fan_rating\", \"arguments\": {\"event_id\": 67890}}, {\"name\": \"games_esports\", \"arguments\": {\"event_id\": 54321}}]"
+  },
+  {
+   "i": 121,
+   "expected": "racecards",
+   "got": "racecards",
+   "ok": true,
+   "time_s": 2.3,
+   "query": "What races are scheduled for April 10, 2023 in horse racing?",
+   "head": "[{\"name\": \"racecards\", \"arguments\": {\"date\": \"2023-04-10\"}}]"
+  },
+  {
+   "i": 122,
+   "expected": "get_trend_keyword",
+   "got": "get_trend_keyword",
+   "ok": true,
+   "time_s": 3.08,
+   "query": "Find the trending keywords in the US on May 18, 2023, using the Trends Keywords in Different Regions API.",
+   "head": "[{\"name\": \"get_trend_keyword\", \"arguments\": {\"date\": \"2023-05-18\", \"geo\": \"US\"}}]"
+  },
+  {
+   "i": 123,
+   "expected": "density",
+   "got": null,
+   "ok": false,
+   "time_s": 4.73,
+   "query": "What is the density of an object with a mass of 40g and a volume of 8cm\u00b3, and what is the Euclidean distance between the",
+   "head": "[{\"name\": \"density\", \"arguments\": {\"mass\": 40, \"volume\": 8}}, {\"name\": \"euclidean_distance\", \"arguments\": {\"point_a\": [3, 5], \"point_b\": [6, 9]}}]"
+  },
+  {
+   "i": 124,
+   "expected": "get_vehicule_info",
+   "got": "get_vehicule_info",
+   "ok": true,
+   "time_s": 4.32,
+   "query": "Please find the information of the vehicle with registration number 'AB-123-CD' and also fetch the details of the motiva",
+   "head": "[{\"name\": \"get_vehicule_info\", \"arguments\": {\"immatriculation\": \"AB-123-CD\"}}, {\"name\": \"get_a_specific_picture\", \"arguments\": {\"is_id\": \"1234\"}}]"
+  },
+  {
+   "i": 125,
+   "expected": "get_watches_by_brand_family_model",
+   "got": "get_watches_by_brand_family_model",
+   "ok": true,
+   "time_s": 5.13,
+   "query": "Fetch the watches from the Omega brand, Speedmaster family, and the Moonwatch model. Additionally, get the pageant conte",
+   "head": "[{\"name\": \"get_watches_by_brand_family_model\", \"arguments\": {\"brandname\": \"Omega\", \"family\": \"Speedmaster\", \"model\": \"Moonwatch\"}}, {\"name\": \"single_contest\", \""
+  },
+  {
+   "i": 126,
+   "expected": "country_by_iso_code",
+   "got": "country_by_iso_code",
+   "ok": true,
+   "time_s": 3.14,
+   "query": "Get information about Italy in Italian, focusing on its capital and official language.",
+   "head": "[{\"name\": \"country_by_iso_code\", \"arguments\": {\"iso_code\": \"IT\", \"fields\": \"capital,official_language\", \"lang\": \"it\"}}]"
+  },
+  {
+   "i": 127,
+   "expected": "find_files",
+   "got": "find_files",
+   "ok": true,
+   "time_s": 2.35,
+   "query": "List all .txt files in the directory '/home/user/documents'.",
+   "head": "[{\"name\": \"find_files\", \"arguments\": {\"directory\": \"/home/user/documents\", \"extension\": \".txt\"}}]"
+  },
+  {
+   "i": 128,
+   "expected": "cars",
+   "got": "cars",
+   "ok": true,
+   "time_s": 3.39,
+   "query": "List all sedans made by Toyota in 2015, with a limit of 10 results per page.",
+   "head": "[{\"name\": \"cars\", \"arguments\": {\"type\": \"sedan\", \"make\": \"Toyota\", \"year\": \"2015\", \"limit\": \"10\"}}]"
+  },
+  {
+   "i": 129,
+   "expected": "search_zip_codes",
+   "got": "search_zip_codes",
+   "ok": true,
+   "time_s": 4.21,
+   "query": "Locate zip codes in Mexico that begin with 44000 and 60000.",
+   "head": "[{\"name\": \"search_zip_codes\", \"arguments\": {\"codigo_postal\": \"44000\"}}, {\"name\": \"search_zip_codes\", \"arguments\": {\"codigo_postal\": \"60000\"}}]"
+  },
+  {
+   "i": 130,
+   "expected": "daily_forecast_5_days",
+   "got": "daily_forecast_5_days",
+   "ok": true,
+   "time_s": 3.18,
+   "query": "I need the weather prediction for Los Angeles for the next five days.",
+   "head": "[{\"name\": \"daily_forecast_5_days\", \"arguments\": {\"latitude\": \"34.05\", \"longitude\": \"-118.24\"}}]"
+  },
+  {
+   "i": 131,
+   "expected": "channel",
+   "got": "channel",
+   "ok": true,
+   "time_s": 5.37,
+   "query": "Could you fetch the latest videos from the channel 'UCiTGKA9W0G0TL8Hm7Uf_u9A' sorted by popularity? Also, please retriev",
+   "head": "[{\"name\": \"channel\", \"arguments\": {\"is_id\": \"UCiTGKA9W0G0TL8Hm7Uf_u9A\", \"sort\": \"p\"}}, {\"name\": \"get_wisdom_quotes_by_page\", \"arguments\": {\"page\": \"3\"}}]"
+  },
+  {
+   "i": 132,
+   "expected": "find_longest_word",
+   "got": null,
+   "ok": false,
+   "time_s": 2.34,
+   "query": "What is the longest word in the list ['apple', 'banana', 'cherry']?",
+   "head": "[{\"name\": \"find_longest_word\", \"arguments\": {\"words\": [\"apple\", \"banana\", \"cherry\"]}}]"
+  },
+  {
+   "i": 133,
+   "expected": "autocomplete_zipcodes_lite",
+   "got": "autocomplete_zipcodes_lite",
+   "ok": true,
+   "time_s": 2.02,
+   "query": "Get autocomplete suggestions for the zip code '94101'.",
+   "head": "[{\"name\": \"autocomplete_zipcodes_lite\", \"arguments\": {\"zipcode\": \"94101\"}}]"
+  },
+  {
+   "i": 134,
+   "expected": "linear_regression_prediction",
+   "got": null,
+   "ok": false,
+   "time_s": 5.02,
+   "query": "Predict the y-value for an x-value of 15 using the data points (5, 10), (10, 20), (15, 30), (20, 40).",
+   "head": "[{\"name\": \"linear_regression_prediction\", \"arguments\": {\"x_values\": [5, 10, 15, 20], \"y_values\": [10, 20, 30, 40], \"target_x\": 15}}]"
+  },
+  {
+   "i": 135,
+   "expected": "fastsearchfull",
+   "got": "fastsearchfull",
+   "ok": true,
+   "time_s": 2.05,
+   "query": "Find detailed information about the search term 'iphone 11' using the Fast API.",
+   "head": "[{\"name\": \"fastsearchfull\", \"arguments\": {\"fastav\": \"iphone 11\"}}]"
+  },
+  {
+   "i": 136,
+   "expected": "getdownloadurl",
+   "got": "getdownloadurl",
+   "ok": true,
+   "time_s": 3.02,
+   "query": "I need the download URL for the text 'Python is a great language.' in the voice 'en-US-AriaNeural'.",
+   "head": "[{\"name\": \"getdownloadurl\", \"arguments\": {\"text\": \"Python is a great language.\", \"voice_name\": \"en-US-AriaNeural\"}}]"
+  },
+  {
+   "i": 137,
+   "expected": "calculate_calorie_intake",
+   "got": "calculate_calorie_intake",
+   "ok": true,
+   "time_s": 5.06,
+   "query": "Calculate the calorie intake for a 25-year-old female, weighing 60 kg, 165 cm tall, with an activity level of 2, aiming ",
+   "head": "[{\"name\": \"calculate_calorie_intake\", \"arguments\": {\"weight_kg\": 60, \"height_cm\": 165, \"age\": 25, \"sex\": \"female\", \"activity_level\": 2, \"goal\": \"lose\"}}]"
+  },
+  {
+   "i": 138,
+   "expected": "find_pairs_with_sum",
+   "got": "compound_interest",
+   "ok": false,
+   "time_s": 6.99,
+   "query": "Given a list of integers [3, 7, 1, 9, 2, 8], find all pairs that sum up to 10. Also, compute the compound interest for a",
+   "head": "[{\"name\": \"find_pairs_with_sum\", \"arguments\": {\"nums\": [3, 7, 1, 9, 2, 8], \"target\": 10}}, {\"name\": \"compound_interest\", \"arguments\": {\"principal\": 10000, \"rate"
+  },
+  {
+   "i": 139,
+   "expected": "exchange",
+   "got": "exchange",
+   "ok": true,
+   "time_s": 5.11,
+   "query": "What is the exchange rate of 100 USD to EUR and 50 GBP to USD as of today?",
+   "head": "[{\"name\": \"exchange\", \"arguments\": {\"base\": \"USD\", \"to\": \"EUR\", \"int\": \"100\"}}, {\"name\": \"exchange\", \"arguments\": {\"base\": \"GBP\", \"to\": \"USD\", \"int\": \"50\"}}]"
+  },
+  {
+   "i": 140,
+   "expected": "actors_get_interesting_jobs",
+   "got": "actors_get_interesting_jobs",
+   "ok": true,
+   "time_s": 4.8,
+   "query": "Can you find interesting jobs for actors nm0001667 and nm0000369?",
+   "head": "[{\"name\": \"actors_get_interesting_jobs\", \"arguments\": {\"nconst\": \"nm0001667\"}}, {\"name\": \"actors_get_interesting_jobs\", \"arguments\": {\"nconst\": \"nm0000369\"}}]"
+  },
+  {
+   "i": 141,
+   "expected": "kanji_stroke_number",
+   "got": "kanji_stroke_number",
+   "ok": true,
+   "time_s": 2.0,
+   "query": "Find Kanji characters with 12 strokes.",
+   "head": "[{\"name\": \"kanji_stroke_number\", \"arguments\": {\"ks\": 12}}]"
+  },
+  {
+   "i": 142,
+   "expected": "match",
+   "got": "match",
+   "ok": true,
+   "time_s": 2.07,
+   "query": "Who played in the soccer match with the ID '123456' and what were the final scores for both the home and away teams?",
+   "head": "[{\"name\": \"match\", \"arguments\": {\"is_id\": \"123456\"}}]"
+  },
+  {
+   "i": 143,
+   "expected": "get_match",
+   "got": "get_match",
+   "ok": true,
+   "time_s": 3.78,
+   "query": "Calculate the love match percentage between 'John' and 'Mary'. Also, fetch a random funny drinking question.",
+   "head": "[{\"name\": \"get_match\", \"arguments\": {\"fname\": \"John\", \"sname\": \"Mary\"}}, {\"name\": \"get_random_question\", \"arguments\": {\"type\": \"funny\"}}]"
+  },
+  {
+   "i": 144,
+   "expected": "open_high_low_close_ohlc_price",
+   "got": "open_high_low_close_ohlc_price",
+   "ok": true,
+   "time_s": 5.34,
+   "query": "Get the open, high, low, and close prices for the symbol 'AAPL' on the date '2022-01-01' and the base currency 'USD', an",
+   "head": "[{\"name\": \"open_high_low_close_ohlc_price\", \"arguments\": {\"symbols\": \"AAPL\", \"date\": \"2022-01-01\", \"base\": \"USD\"}}, {\"name\": \"random_credit_card\", \"arguments\": "
+  },
+  {
+   "i": 145,
+   "expected": "contacts",
+   "got": "contacts",
+   "ok": true,
+   "time_s": 6.11,
+   "query": "You are asked to fetch the contacts list from a WhatsApp instance with the phone_id '12345', retrieve advanced technical",
+   "head": "[{\"name\": \"contacts\", \"arguments\": {\"phone_id\": \"12345\"}}, {\"name\": \"advanced_phone_number_lookup\", \"arguments\": {\"dialcode\": \"+1234567890\"}}, {\"name\": \"contact"
+  },
+  {
+   "i": 146,
+   "expected": "fresh_potential_gems",
+   "got": "fresh_potential_gems",
+   "ok": true,
+   "time_s": 4.57,
+   "query": "Fetch the first 15 and the last 5 crypto gems from the Crypto Gem Finder API.",
+   "head": "[{\"name\": \"fresh_potential_gems\", \"arguments\": {\"limit\": \"15\", \"page\": \"1\"}}, {\"name\": \"fresh_potential_gems\", \"arguments\": {\"limit\": \"5\", \"page\": \"2\"}}]"
+  },
+  {
+   "i": 147,
+   "expected": "radical_stroke_number",
+   "got": "radical_stroke_number",
+   "ok": true,
+   "time_s": 1.92,
+   "query": "Find advanced search results from the Kanji Alive API for the radical stroke number 7.",
+   "head": "[{\"name\": \"radical_stroke_number\", \"arguments\": {\"rs\": \"7\"}}]"
+  },
+  {
+   "i": 148,
+   "expected": "stock_company_overview",
+   "got": "stock_company_overview",
+   "ok": true,
+   "time_s": 4.37,
+   "query": "Provide the company overview for Apple Inc. listed on NASDAQ and obtain the latest securities report data for the compan",
+   "head": "[{\"name\": \"stock_company_overview\", \"arguments\": {\"symbol\": \"AAPL:NASDAQ\"}}, {\"name\": \"getlatestbysecuritiescode\", \"arguments\": {\"securities_code\": 123456}}]"
+  },
+  {
+   "i": 149,
+   "expected": "retrieve_aggregated_loan_offers",
+   "got": "retrieve_aggregated_loan_offers",
+   "ok": true,
+   "time_s": 5.83,
+   "query": "Retrieve the aggregated loan offers for the 'bored-ape' collection and the related questions for the query 'how to start",
+   "head": "[{\"name\": \"retrieve_aggregated_loan_offers\", \"arguments\": {\"collection\": \"bored-ape\"}}, {\"name\": \"get_related_questions\", \"arguments\": {\"query\": \"how to start a"
+  },
+  {
+   "i": 150,
+   "expected": "search_users",
+   "got": "search_users",
+   "ok": true,
+   "time_s": 1.81,
+   "query": "How can I search for TikTok users interested in 'cooking'?",
+   "head": "[{\"name\": \"search_users\", \"arguments\": {\"keyword\": \"cooking\"}}]"
+  },
+  {
+   "i": 151,
+   "expected": "getlearningresources",
+   "got": "getlearningresources",
+   "ok": true,
+   "time_s": 1.82,
+   "query": "Fetch the 5th page of artificial intelligence learning resources.",
+   "head": "[{\"name\": \"getlearningresources\", \"arguments\": {\"page\": 5}}]"
+  },
+  {
+   "i": 152,
+   "expected": "daily",
+   "got": "daily",
+   "ok": true,
+   "time_s": 2.26,
+   "query": "Fetch the daily weather forecast for Berlin in German using the place_id.",
+   "head": "[{\"name\": \"daily\", \"arguments\": {\"language\": \"de\", \"place_id\": \"Berlin\"}}]"
+  },
+  {
+   "i": 153,
+   "expected": "find_duplicate_number",
+   "got": "is_palindrome",
+   "ok": false,
+   "time_s": 4.34,
+   "query": "Find the duplicate number in the list [1, 2, 3, 4, 4] and check if the string 'radar' is a palindrome.",
+   "head": "[{\"name\": \"find_duplicate_number\", \"arguments\": {\"nums\": [1, 2, 3, 4, 4]}}, {\"name\": \"is_palindrome\", \"arguments\": {\"text\": \"radar\"}}]"
+  },
+  {
+   "i": 154,
+   "expected": "calculate_standard_deviation",
+   "got": null,
+   "ok": false,
+   "time_s": 3.37,
+   "query": "Calculate the standard deviation for a dataset of exam scores: [85, 90, 78, 92, 88].",
+   "head": "[{\"name\": \"calculate_standard_deviation\", \"arguments\": {\"numbers\": [85, 90, 78, 92, 88]}}]"
+  },
+  {
+   "i": 155,
+   "expected": "search",
+   "got": "search",
+   "ok": true,
+   "time_s": 5.0,
+   "query": "Perform a search query for companies related to 'healthcare' and 'biotechnology', and return the results from page '3'. ",
+   "head": "[{\"name\": \"search\", \"arguments\": {\"terms\": \"healthcare,biotechnology\", \"page\": \"3\"}}, {\"name\": \"update\", \"arguments\": {\"info1\": \"Seven\", \"info2\": \"Eight\", \"info"
+  },
+  {
+   "i": 156,
+   "expected": "search_hashtags",
+   "got": "search_hashtags",
+   "ok": true,
+   "time_s": 1.81,
+   "query": "What are the top 10 hashtags related to 'nature' on Instagram?",
+   "head": "[{\"name\": \"search_hashtags\", \"arguments\": {\"name\": \"nature\"}}]"
+  },
+  {
+   "i": 157,
+   "expected": "find_next_greater_element",
+   "got": null,
+   "ok": false,
+   "time_s": 3.17,
+   "query": "Find the next greater elements for the list of numbers [2, 4, 5, 3, 8, 1]",
+   "head": "[{\"name\": \"find_next_greater_element\", \"arguments\": {\"nums\": [2, 4, 5, 3, 8, 1]}}]"
+  },
+  {
+   "i": 158,
+   "expected": "calculate_calorie_intake",
+   "got": "calculate_calorie_intake",
+   "ok": true,
+   "time_s": 9.47,
+   "query": "A 45-year-old female, weighing 75 kg and standing 180 cm tall, is sedentary and wants to gain weight. She wants to know ",
+   "head": "[{\"name\": \"calculate_calorie_intake\", \"arguments\": {\"weight_kg\": 75, \"height_cm\": 180, \"age\": 45, \"sex\": \"female\", \"activity_level\": 1, \"goal\": \"gain\"}}, {\"name"
+  },
+  {
+   "i": 159,
+   "expected": "get_food_by_id",
+   "got": "get_food_by_id",
+   "ok": true,
+   "time_s": 2.13,
+   "query": "Fetch the information of a food item with ID '013' and print it in a human-readable format, given a custom API key and t",
+   "head": "[{\"name\": \"get_food_by_id\", \"arguments\": {\"is_id\": \"013\"}}]"
+  },
+  {
+   "i": 160,
+   "expected": "getlistbysecuritiescode",
+   "got": "getlistbysecuritiescode",
+   "ok": true,
+   "time_s": 2.4,
+   "query": "What's the securities code for Nintendo and can you get its report?",
+   "head": "[{\"name\": \"getlistbysecuritiescode\", \"arguments\": {\"securities_code\": 7974}}]"
+  },
+  {
+   "i": 161,
+   "expected": "solve_quadratic",
+   "got": "solve_quadratic",
+   "ok": true,
+   "time_s": 2.79,
+   "query": "I want to find the roots of the quadratic equation with coefficients a=1, b=-3, and c=2.",
+   "head": "[{\"name\": \"solve_quadratic\", \"arguments\": {\"a\": 1, \"b\": -3, \"c\": 2}}]"
+  },
+  {
+   "i": 162,
+   "expected": "get_ip_zipcode",
+   "got": "get_ip_zipcode",
+   "ok": true,
+   "time_s": 4.44,
+   "query": "What are the ZIP codes for IP addresses 1.1.1.1 and 8.8.4.4?",
+   "head": "[{\"name\": \"get_ip_zipcode\", \"arguments\": {\"ip\": \"1.1.1.1\"}}, {\"name\": \"get_ip_zipcode\", \"arguments\": {\"ip\": \"8.8.4.4\"}}]"
+  },
+  {
+   "i": 163,
+   "expected": "binary_search",
+   "got": null,
+   "ok": false,
+   "time_s": 4.83,
+   "query": "Find the index of the number 45 in a sorted list [10, 20, 30, 40, 45, 50, 60, 70, 80].",
+   "head": "[{\"name\": \"binary_search\", \"arguments\": {\"arr\": [10, 20, 30, 40, 45, 50, 60, 70, 80], \"target\": 45}}]"
+  },
+  {
+   "i": 164,
+   "expected": "sort_numbers",
+   "got": null,
+   "ok": false,
+   "time_s": 3.13,
+   "query": "Sort a list of numbers [3.2, 1.5, 2.7, 4.1] in ascending order.",
+   "head": "[{\"name\": \"sort_numbers\", \"arguments\": {\"numbers\": [3.2, 1.5, 2.7, 4.1]}}]"
+  },
+  {
+   "i": 165,
+   "expected": "search_gifs",
+   "got": "search_gifs",
+   "ok": true,
+   "time_s": 2.39,
+   "query": "I need 5 gifs of cute puppies.",
+   "head": "[{\"name\": \"search_gifs\", \"arguments\": {\"query\": \"cute puppies\", \"number\": 5}}]"
+  },
+  {
+   "i": 166,
+   "expected": "std_deviation",
+   "got": "neuronal_activity_rate",
+   "ok": false,
+   "time_s": 6.95,
+   "query": "Find the standard deviation for [9.4, 9.8, 10.1, 9.6, 10.0]. And what is the neuronal activity rate if the input rate is",
+   "head": "[{\"name\": \"std_deviation\", \"arguments\": {\"numbers\": [9.4, 9.8, 10.1, 9.6, 10.0]}}, {\"name\": \"neuronal_activity_rate\", \"arguments\": {\"synaptic_input_rate\": 220, "
+  },
+  {
+   "i": 167,
+   "expected": "nearest_place",
+   "got": "nearest_place",
+   "ok": true,
+   "time_s": 7.09,
+   "query": "What is the closest city to the coordinates 34.0522 N, 118.2437 W in French, and the nearest village in German?",
+   "head": "[{\"name\": \"nearest_place\", \"arguments\": {\"lat\": \"34.0522N\", \"lon\": \"118.2437W\", \"language\": \"fr\"}}, {\"name\": \"nearest_place\", \"arguments\": {\"lat\": \"34.0522N\", \""
+  },
+  {
+   "i": 168,
+   "expected": "search_autocomplete_api",
+   "got": "search_autocomplete_api",
+   "ok": true,
+   "time_s": 8.11,
+   "query": "Could you autocomplete these location queries: 'metar:EGLL', 'auto:ip', and '2001:0db8:85a3:0000:0000:8a2e:0370:7334'?",
+   "head": "[{\"name\": \"search_autocomplete_api\", \"arguments\": {\"q\": \"metar:EGLL\"}}, {\"name\": \"search_autocomplete_api\", \"arguments\": {\"q\": \"auto:ip\"}}, {\"name\": \"search_aut"
+  },
+  {
+   "i": 169,
+   "expected": "players_at_position",
+   "got": "players_at_position",
+   "ok": true,
+   "time_s": 1.81,
+   "query": "I want to know about the football players who are positioned as QB. Thanks!",
+   "head": "[{\"name\": \"players_at_position\", \"arguments\": {\"position\": \"QB\"}}]"
+  },
+  {
+   "i": 170,
+   "expected": "stock_information",
+   "got": "stock_information",
+   "ok": true,
+   "time_s": 1.81,
+   "query": "What is the current stock price of Apple Inc. (AAPL)?",
+   "head": "[{\"name\": \"stock_information\", \"arguments\": {\"name\": \"AAPL\"}}]"
+  },
+  {
+   "i": 171,
+   "expected": "tournament_results_by_id_and_year_wta",
+   "got": "tournament_results_by_id_and_year_wta",
+   "ok": true,
+   "time_s": 4.77,
+   "query": "I want to see all the matches that took place in the 2020 WTA tournament with ID 'T567'. Also, find me the latest media ",
+   "head": "[{\"name\": \"tournament_results_by_id_and_year_wta\", \"arguments\": {\"year\": 2020, \"tournament_id\": \"T567\"}}, {\"name\": \"player_latest_media\", \"arguments\": {\"player_"
+  },
+  {
+   "i": 172,
+   "expected": "get_a_conversation",
+   "got": "get_a_conversation",
+   "ok": true,
+   "time_s": 2.2,
+   "query": "Get the conversation with ID 67890 that was ended by User B.",
+   "head": "[{\"name\": \"get_a_conversation\", \"arguments\": {\"is_id\": 67890}}]"
+  },
+  {
+   "i": 173,
+   "expected": "matchincidents",
+   "got": "matchincidents",
+   "ok": true,
+   "time_s": 5.38,
+   "query": "Fetch incidents for the matches with IDs 24680 and 13579. Also, include the match with ID 97531.",
+   "head": "[{\"name\": \"matchincidents\", \"arguments\": {\"is_id\": 24680}}, {\"name\": \"matchincidents\", \"arguments\": {\"is_id\": 13579}}, {\"name\": \"matchincidents\", \"arguments\": {"
+  },
+  {
+   "i": 174,
+   "expected": "project_population",
+   "got": "project_population",
+   "ok": true,
+   "time_s": 5.64,
+   "query": "What will be the population of a city with a current population of 25000 in 10 years with an annual growth rate of 3.5%?",
+   "head": "[{\"name\": \"project_population\", \"arguments\": {\"current_pop\": 25000, \"num_years\": 10, \"annual_growth\": 3.5}}, {\"name\": \"get_ip_zipcode\", \"arguments\": {\"ip\": \"172"
+  },
+  {
+   "i": 175,
+   "expected": "find_max_subarray_sum",
+   "got": null,
+   "ok": false,
+   "time_s": 3.03,
+   "query": "Find the maximum subarray sum in the list [1, -2, 3, 10, -8, 3]",
+   "head": "[{\"name\": \"find_max_subarray_sum\", \"arguments\": {\"nums\": [1, -2, 3, 10, -8, 3]}}]"
+  },
+  {
+   "i": 176,
+   "expected": "matchschedules",
+   "got": "matchschedules",
+   "ok": true,
+   "time_s": 5.48,
+   "query": "What are the schedules for ice hockey matches on the 25th of December, 2021, and the 1st of January, 2022?",
+   "head": "[{\"name\": \"matchschedules\", \"arguments\": {\"day\": 25, \"month\": 12, \"year\": 2021}}, {\"name\": \"matchschedules\", \"arguments\": {\"day\": 1, \"month\": 1, \"year\": 2022}}]"
+  },
+  {
+   "i": 177,
+   "expected": "get_scrabble_score",
+   "got": "get_scrabble_score",
+   "ok": true,
+   "time_s": 5.02,
+   "query": "What is the Scrabble score for the word 'Reinforcement' and what homeless shelters are within a 10 mile radius of coordi",
+   "head": "[{\"name\": \"get_scrabble_score\", \"arguments\": {\"mot\": \"Reinforcement\"}}, {\"name\": \"by_location\", \"arguments\": {\"lat\": \"40.7128\", \"lng\": \"-74.0060\", \"radius\": \"10"
+  },
+  {
+   "i": 178,
+   "expected": "emailvalidation",
+   "got": "emailvalidation",
+   "ok": true,
+   "time_s": 1.86,
+   "query": "Check if the email 'user@disposablemail.com' is a disposable email.",
+   "head": "[{\"name\": \"emailvalidation\", \"arguments\": {\"email\": \"user@disposablemail.com\"}}]"
+  },
+  {
+   "i": 179,
+   "expected": "get_names",
+   "got": "get_names",
+   "ok": true,
+   "time_s": 8.0,
+   "query": "I need 10 Indian female first names and the uppercase text of Chapter 3 from the Book of Job without vowels. Also, I wan",
+   "head": "[{\"name\": \"get_names\", \"arguments\": {\"first\": true, \"gender\": \"female\", \"last\": false, \"number\": 10}}, {\"name\": \"get_chapter\", \"arguments\": {\"book_name\": \"job\","
+  },
+  {
+   "i": 180,
+   "expected": "get_post_data_download_video_photo",
+   "got": "get_post_data_download_video_photo",
+   "ok": true,
+   "time_s": 2.39,
+   "query": "I'm interested in getting detailed data for a post with the ID 'xyz789' on 9gag, including a download link for any video",
+   "head": "[{\"name\": \"get_post_data_download_video_photo\", \"arguments\": {\"post_id\": \"xyz789\"}}]"
+  },
+  {
+   "i": 181,
+   "expected": "wire_resistance",
+   "got": "wire_resistance",
+   "ok": true,
+   "time_s": 6.67,
+   "query": "In my electrical engineering class, we're studying wire resistances. Could you calculate the resistance for a 40 meter c",
+   "head": "[{\"name\": \"wire_resistance\", \"arguments\": {\"length_m\": 40, \"area_sq_m\": 0.0003, \"material\": \"copper\"}}, {\"name\": \"wire_resistance\", \"arguments\": {\"length_m\": 40"
+  },
+  {
+   "i": 182,
+   "expected": "historic_event_by_year",
+   "got": "historic_event_by_year",
+   "ok": true,
+   "time_s": 3.61,
+   "query": "What significant events occurred in the year 1969 and what is the response from endpoint 345?",
+   "head": "[{\"name\": \"historic_event_by_year\", \"arguments\": {\"year\": \"1969\"}}, {\"name\": \"dinotest\", \"arguments\": {\"num\": \"345\"}}]"
+  },
+  {
+   "i": 183,
+   "expected": "stock_get_stock_price",
+   "got": "stock_get_stock_price",
+   "ok": true,
+   "time_s": 2.0,
+   "query": "What is the current stock price for Apple Inc.?",
+   "head": "[{\"name\": \"stock_get_stock_price\", \"arguments\": {\"symbol\": \"AAPL\"}}]"
+  },
+  {
+   "i": 184,
+   "expected": "get_holidays_by_year",
+   "got": "get_holidays_by_year",
+   "ok": true,
+   "time_s": 5.11,
+   "query": "Find out the list of public holidays in France and Germany for the year 2023.",
+   "head": "[{\"name\": \"get_holidays_by_year\", \"arguments\": {\"year\": 2023, \"country_code\": \"FR\"}}, {\"name\": \"get_holidays_by_year\", \"arguments\": {\"year\": 2023, \"country_code"
+  },
+  {
+   "i": 185,
+   "expected": "remove_duplicates",
+   "got": null,
+   "ok": false,
+   "time_s": 5.87,
+   "query": "Find the list after removing duplicates from the list [1, 1, 1, 1, 1] and from the list ['a', 'b', 'c', 'a', 'b', 'c', '",
+   "head": "[{\"name\": \"remove_duplicates\", \"arguments\": {\"lst\": [1, 1, 1, 1, 1]}}, {\"name\": \"remove_duplicates\", \"arguments\": {\"lst\": [\"a\", \"b\", \"c\", \"a\", \"b\", \"c\", \"a\", \"b"
+  },
+  {
+   "i": 186,
+   "expected": "get_models",
+   "got": "get_models",
+   "ok": true,
+   "time_s": 3.59,
+   "query": "Please help me find models for audio analysis and check if the text 'AI technology is evolving rapidly' is AI-generated.",
+   "head": "[{\"name\": \"get_models\", \"arguments\": {\"type\": \"audio\"}}, {\"name\": \"chat_gpt_detector\", \"arguments\": {\"text\": \"AI technology is evolving rapidly\"}}]"
+  },
+  {
+   "i": 187,
+   "expected": "single_contest",
+   "got": "single_contest",
+   "ok": true,
+   "time_s": 3.54,
+   "query": "Get the pageant contest details for an ID of 456. Additionally, find plants suitable for a Desert climate.",
+   "head": "[{\"name\": \"single_contest\", \"arguments\": {\"is_id\": 456}}, {\"name\": \"get_by_climate\", \"arguments\": {\"climate\": \"Desert\"}}]"
+  },
+  {
+   "i": 188,
+   "expected": "get_joke_of_the_day_by_category",
+   "got": "get_joke_of_the_day_by_category",
+   "ok": true,
+   "time_s": 2.23,
+   "query": "Fetch the joke of the day from the 'nerdy' category.",
+   "head": "[{\"name\": \"get_joke_of_the_day_by_category\", \"arguments\": {\"category\": \"nerdy\"}}]"
+  },
+  {
+   "i": 189,
+   "expected": "get_job_details",
+   "got": "get_job_details",
+   "ok": true,
+   "time_s": 3.85,
+   "query": "Fetch detailed job information for a product manager role at Microsoft, without including skills.",
+   "head": "[{\"name\": \"get_job_details\", \"arguments\": {\"job_url\": \"https://www.linkedin.com/jobs/view/3690897280/\", \"include_skills\": \"false\"}}]"
+  },
+  {
+   "i": 190,
+   "expected": "racecards",
+   "got": "racecards",
+   "ok": true,
+   "time_s": 2.36,
+   "query": "What are the horse racing events scheduled for March 1, 2022?",
+   "head": "[{\"name\": \"racecards\", \"arguments\": {\"date\": \"2022-03-01\"}}]"
+  },
+  {
+   "i": 191,
+   "expected": "time_zone_api",
+   "got": "time_zone_api",
+   "ok": true,
+   "time_s": 1.86,
+   "query": "What is the local time in Sydney and what about the time in London using their respective IATA codes?",
+   "head": "[{\"name\": \"time_zone_api\", \"arguments\": {\"q\": \"SYD\"}}]"
+  },
+  {
+   "i": 192,
+   "expected": "order_by_descending",
+   "got": "order_by_descending",
+   "ok": true,
+   "time_s": 3.5,
+   "query": "List the dog breeds that are the easiest to train in descending order and provide all the airplanes from the brand Gulfs",
+   "head": "[{\"name\": \"order_by_descending\", \"arguments\": {\"ordering\": \"-trainability\"}}, {\"name\": \"airplanes_by_brand\", \"arguments\": {\"brand\": \"Gulfstream\"}}]"
+  },
+  {
+   "i": 193,
+   "expected": "is_anagram_phrase",
+   "got": "is_anagram_phrase",
+   "ok": true,
+   "time_s": 2.68,
+   "query": "Is 'A gentleman' an anagram of 'Elegant man'?",
+   "head": "[{\"name\": \"is_anagram_phrase\", \"arguments\": {\"phrase1\": \"A gentleman\", \"phrase2\": \"Elegant man\"}}]"
+  },
+  {
+   "i": 194,
+   "expected": "v1_mortgagecalculator",
+   "got": "v1_mortgagecalculator",
+   "ok": true,
+   "time_s": 8.11,
+   "query": "What would be the monthly mortgage payment for a $700,000 house with a 15% down payment, 6% annual interest rate, 15-yea",
+   "head": "[{\"name\": \"v1_mortgagecalculator\", \"arguments\": {\"interest_rate\": 6, \"downpayment\": 105000, \"home_value\": 700000, \"monthly_hoa\": 350, \"annual_property_tax\": \"45"
+  },
+  {
+   "i": 195,
+   "expected": "royal_matches",
+   "got": "royal_matches",
+   "ok": true,
+   "time_s": 1.8,
+   "query": "What are the top 30 royal matches in Trackmania?",
+   "head": "[{\"name\": \"royal_matches\", \"arguments\": {\"limit\": 30}}]"
+  },
+  {
+   "i": 196,
+   "expected": "quote_get_margin_requirements",
+   "got": "quote_get_margin_requirements",
+   "ok": true,
+   "time_s": 3.07,
+   "query": "I need the margin requirements for Google's parent company Alphabet Inc. (GOOGL) and Facebook Inc. (META).",
+   "head": "[{\"name\": \"quote_get_margin_requirements\", \"arguments\": {\"symbol\": \"GOOGL\"}}, {\"name\": \"quote_get_margin_requirements\", \"arguments\": {\"symbol\": \"META\"}}]"
+  },
+  {
+   "i": 197,
+   "expected": "channel_channels",
+   "got": "channel_channels",
+   "ok": true,
+   "time_s": 3.41,
+   "query": "Fetch the collections of the channel with ID 'UC-lHJZR3Gqxm24_Vd_AJ5Yw' in English language.",
+   "head": "[{\"name\": \"channel_channels\", \"arguments\": {\"is_id\": \"UC-lHJZR3Gqxm24_Vd_AJ5Yw\", \"hl\": \"en\", \"filter\": \"all_collections\"}}]"
+  },
+  {
+   "i": 198,
+   "expected": "ema",
+   "got": "ema",
+   "ok": true,
+   "time_s": 3.24,
+   "query": "I want to find the Exponential Moving Average (EMA) for Apple Inc. (AAPL) stock prices using the closing prices for the ",
+   "head": "[{\"name\": \"ema\", \"arguments\": {\"symbol\": \"AAPL\", \"interval\": \"1h\", \"series_type\": \"close\", \"outputsize\": 60, \"time_period\": 14}}]"
+  },
+  {
+   "i": 199,
+   "expected": "ticker",
+   "got": "ticker",
+   "ok": true,
+   "time_s": 2.16,
+   "query": "Get the latest financial data for the NASDAQ Composite Index (^IXIC) in JSON format, filtered by the United States count",
+   "head": "[{\"name\": \"ticker\", \"arguments\": {\"t\": \"^IXIC\", \"gl\": \"US\", \"hl\": \"es\"}}]"
+  }
+ ]
+}

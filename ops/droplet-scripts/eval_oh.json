@@ -1,0 +1,145 @@
+{
+ "model": "oh",
+ "results": [
+  {
+   "id": "json1",
+   "cat": "json",
+   "pass": false,
+   "time_s": 3.6,
+   "answer_head": "The user wants me to reply with only valid JSON that matches the format: {\"ok\": true, \"items\": [\"a\",\"b\",\"c\"]}. I should provide exactly that"
+  },
+  {
+   "id": "json2",
+   "cat": "json",
+   "pass": false,
+   "time_s": 3.1,
+   "answer_head": "The user is asking me to send ONLY a valid JSON response: {\"status\": \"ok\", \"total\": 42}\n\nThey want me to respond with just that JSON and not"
+  },
+  {
+   "id": "bullets5",
+   "cat": "format",
+   "pass": true,
+   "time_s": 18.6,
+   "answer_head": "The user wants me to list exactly 5 reasons to fine-tune an LLM, with each reason on a new line starting with '- '. Let me think about the m"
+  },
+  {
+   "id": "bullets3pt",
+   "cat": "format",
+   "pass": true,
+   "time_s": 10.2,
+   "answer_head": "The user is asking for exactly 3 benefits of ROCm, one per line, each starting with '- '. The request is in Portuguese, so I should respond "
+  },
+  {
+   "id": "codefence",
+   "cat": "format",
+   "pass": true,
+   "time_s": 8.1,
+   "answer_head": "The user wants me to write a Python function called add(a,b) that adds two numbers together. They want it inside a ```python code fence and "
+  },
+  {
+   "id": "single_sentence",
+   "cat": "format",
+   "pass": false,
+   "time_s": 5.5,
+   "answer_head": "The user wants a one-sentence explanation of what a GPU is. I need to be concise and accurate. A GPU (Graphics Processing Unit) is a special"
+  },
+  {
+   "id": "keyword_bandwidth",
+   "cat": "content",
+   "pass": true,
+   "time_s": 18.7,
+   "answer_head": "The user wants a single paragraph explaining why memory bandwidth matters for LLM inference. I need to include the word 'bandwidth' in the r"
+  },
+  {
+   "id": "keyword_hermes",
+   "cat": "content",
+   "pass": true,
+   "time_s": 6.7,
+   "answer_head": "The user wants a single sentence that includes both the words 'agent' and 'tool'. I need to make sure both words are present in the sentence"
+  },
+  {
+   "id": "tool_weather",
+   "cat": "tool",
+   "pass": true,
+   "time_s": 2.7,
+   "answer_head": "The user is asking about the current weather in Sao Paulo. I need to use the get_weather function with the city parameter set to \"Sao Paulo\""
+  },
+  {
+   "id": "tool_stock",
+   "cat": "tool",
+   "pass": true,
+   "time_s": 2.6,
+   "answer_head": "The user wants to check the current price of AAPL stock. I should use the get_stock function with the ticker \"AAPL\".\n</think>\n\n{\"name\": \"get"
+  },
+  {
+   "id": "nopreamble",
+   "cat": "format",
+   "pass": false,
+   "time_s": 2.0,
+   "answer_head": "The user is asking a simple math question: 2+2=? The answer is 4. They want a direct answer with no preamble or greeting.\n</think>\n\n4"
+  },
+  {
+   "id": "tsv",
+   "cat": "format",
+   "pass": false,
+   "time_s": 11.0,
+   "answer_head": "The user wants a TSV (Tab-Separated Values) output with exactly 3 rows and 2 columns. The columns are \"city\" and \"population\". They don't wa"
+  },
+  {
+   "id": "cap_words",
+   "cat": "format",
+   "pass": false,
+   "time_s": 19.5,
+   "answer_head": "The user is asking me to summarize LoRA (Low-Rank Adaptation) in at most 20 words. Let me think about what LoRA is:\n\nLoRA is a parameter-eff"
+  },
+  {
+   "id": "pt_short",
+   "cat": "format",
+   "pass": false,
+   "time_s": 8.9,
+   "answer_head": "The user is asking me to respond in Portuguese, with a maximum of 15 words, about what VRAM is.\n\nVRAM stands for Video RAM - it's the memory"
+  },
+  {
+   "id": "code_no_comment",
+   "cat": "format",
+   "pass": true,
+   "time_s": 4.9,
+   "answer_head": "The user wants me to write a Python code that creates a list of squares from 0 to 9 using list comprehension. They want only the code output"
+  },
+  {
+   "id": "json_require_keys",
+   "cat": "json",
+   "pass": true,
+   "time_s": 3.9,
+   "answer_head": "The user is asking me to respond with JSON only, containing a specific structure with \"model\" and \"vram_gb\" fields. This appears to be a sim"
+  },
+  {
+   "id": "two_answers",
+   "cat": "format",
+   "pass": false,
+   "time_s": 2.6,
+   "answer_head": "The user wants me to answer with exactly two short sentences. I need to make sure my response is exactly two sentences and they should be sh"
+  },
+  {
+   "id": "explicit_tool_names",
+   "cat": "tool",
+   "pass": false,
+   "time_s": 1.8,
+   "answer_head": "The user wants to schedule a meeting for tomorrow at 10am. The appropriate tool to use is create_calendar_event.\n</think>\n\ncreate_calendar_e"
+  },
+  {
+   "id": "no_markdown",
+   "cat": "format",
+   "pass": true,
+   "time_s": 3.0,
+   "answer_head": "The user wants me to reply without markdown formatting. They're asking for the square root of 144.\n\nThe square root of 144 is 12.\n\nI should "
+  },
+  {
+   "id": "bilingual_follow",
+   "cat": "format",
+   "pass": false,
+   "time_s": 1.9,
+   "answer_head": "The user is asking me to respond with just \"ok\" if I understood their message. They want only the word \"ok\" as my response.\n</think>\n\nok"
+  }
+ ]
+}

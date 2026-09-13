@@ -1,0 +1,112 @@
+[
+  {
+    "run": "FINAL-airline-qwen38-base-t4",
+    "domain": "airline",
+    "agent": "openai/qwen38-base",
+    "trials": 4,
+    "tasks": null,
+    "n_sims": 80,
+    "n_scored": 80,
+    "mean_reward": 0.825,
+    "perfect": 66
+  },
+  {
+    "run": "FINAL-airline-qwen38-xlam-t4",
+    "domain": "airline",
+    "agent": "openai/qwen38-xlam",
+    "trials": 4,
+    "tasks": null,
+    "n_sims": 26,
+    "n_scored": 26,
+    "mean_reward": 0.7308,
+    "perfect": 19
+  },
+  {
+    "run": "airline-qwen38-base-t3",
+    "domain": "airline",
+    "agent": "openai/qwen38-base",
+    "trials": 3,
+    "tasks": null,
+    "n_sims": 54,
+    "n_scored": 54,
+    "mean_reward": 0.8519,
+    "perfect": 46
+  },
+  {
+    "run": "airline-qwen38-dxlam",
+    "domain": "airline",
+    "agent": "openai/qwen38-dxlam",
+    "trials": 1,
+    "tasks": null,
+    "n_sims": 9,
+    "n_scored": 9,
+    "mean_reward": 1.0,
+    "perfect": 9
+  },
+  {
+    "run": "airline-qwen38-dxlam-t3",
+    "domain": "airline",
+    "agent": "openai/qwen38-dxlam",
+    "trials": 3,
+    "tasks": null,
+    "n_sims": 16,
+    "n_scored": 16,
+    "mean_reward": 0.75,
+    "perfect": 12
+  },
+  {
+    "run": "airline-qwen38-xlam-t3",
+    "domain": "airline",
+    "agent": "openai/qwen38-xlam",
+    "trials": 3,
+    "tasks": null,
+    "n_sims": 51,
+    "n_scored": 51,
+    "mean_reward": 0.7059,
+    "perfect": 36
+  },
+  {
+    "run": "retail-qwen38-base-t3",
+    "domain": "retail",
+    "agent": "openai/qwen38-base",
+    "trials": 3,
+    "tasks": null,
+    "n_sims": 59,
+    "n_scored": 45,
+    "mean_reward": 0.6889,
+    "perfect": 31
+  },
+  {
+    "run": "retail-qwen38-dxlam",
+    "domain": "retail",
+    "agent": "openai/qwen38-dxlam",
+    "trials": 1,
+    "tasks": null,
+    "n_sims": 2,
+    "n_scored": 2,
+    "mean_reward": 0.5,
+    "perfect": 1
+  },
+  {
+    "run": "retail-qwen38-xlam",
+    "domain": "retail",
+    "agent": "openai/qwen38-xlam",
+    "trials": 1,
+    "tasks": null,
+    "n_sims": 19,
+    "n_scored": 16,
+    "mean_reward": 0.75,
+    "perfect": 12
+  },
+  {
+    "run": "retail-qwen38-xlam-t3",
+    "domain": "retail",
+    "agent": "openai/qwen38-xlam",
+    "trials": 3,
+    "tasks": null,
+    "n_sims": 28,
+    "n_scored": 21,
+    "mean_reward": 0.5714,
+    "perfect": 12
+  }
+]

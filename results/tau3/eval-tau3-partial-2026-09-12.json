@@ -1,0 +1,60 @@
+{
+  "benchmark": "tau3-bench (tau2-bench, sierra-research)",
+  "run_date": "2026-09-12",
+  "status": "PARCIAL - interrompido (SSH do droplet caiu as ~03:20 UTC)",
+  "configuration": {
+    "user_simulator": "qwen38-base (checkpoint congelado, identico para todos os variantes)",
+    "num_tasks_per_domain": 20,
+    "num_trials": 1,
+    "max_steps": 60,
+    "seed": 300,
+    "domains": ["airline", "retail"],
+    "endpoint": "vLLM ROCm, --enable-auto-tool-choice --tool-call-parser hermes",
+    "thinking": "LIGADO (obrigatorio: sem reasoning o modelo responde a pergunta em vez de se abster)"
+  },
+  "results": {
+    "base": {
+      "airline": {
+        "avg_reward": 0.900,
+        "tasks_with_reward": 20,
+        "exact_pass": 18,
+        "zero_reward": 2
+      },
+      "retail": {
+        "avg_reward": 0.800,
+        "tasks_with_reward": 15,
+        "exact_pass": 12,
+        "zero_reward": 3,
+        "null_rewards": 5,
+        "caveat": "5 de 20 tarefas nao geraram recompensa (provavelmente estouraram max_steps). n=15 e o que contou, entao este numero e menos firme que o do airline."
+      }
+    },
+    "xlam": {
+      "airline": {
+        "avg_reward": 0.79,
+        "tasks_with_reward": 19,
+        "note": "1 tarefa (id 13.0) travou apos 1783s+ e nao completou; o run foi interrompido antes de fechar 20/20",
+        "stuck_task": {
+          "id": "13.0",
+          "elapsed_seconds": 1783,
+          "process_cpu_pct": 0.5,
+          "diagnosis": "processo ocioso, nao trabalhando - loop agente<->simulador que o --max-steps 60 nao cortou"
+        }
+      },
+      "retail": {"status": "NAO RODOU"}
+    },
+    "dxlam": {
+      "status": "NAO RODOU - adiado por decisao do dono (2026-09-12)"
+    }
+  },
+  "finding": "O padrao do BFCL se confirma no agente: xLAM (abstencao destruida, 5,42% no BFCL) vai PIOR que o base tambem no tau3 (0,79 vs 0,90 no airline). Chamar ferramenta quando nao devia custa recompensa num agente multi-turno.",
+  "lost_artifacts": [
+    "results.json brutos do base (airline + retail)",
+    "results.json parcial do xLAM (airline)"
+  ],
+  "how_to_reproduce": {
+    "extractor": "evals/tau_rewards.py (rodar com PY=/root/tau-env/bin/python no droplet)",
+    "reads": "data/simulations/<dominio>-<modelo>/results.json",
+    "note": "results.json tem chaves: timestamp, info, tasks, simulations, simulation_index. simulations pode conter nulls."
+  }
+}

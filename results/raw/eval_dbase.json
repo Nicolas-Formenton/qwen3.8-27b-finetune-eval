@@ -1,0 +1,145 @@
+{
+ "model": "dbase",
+ "results": [
+  {
+   "id": "json1",
+   "cat": "json",
+   "pass": false,
+   "time_s": 10.0,
+   "answer_head": "The user wants me to reply ONLY with valid JSON: {\"ok\": true, \"items\": [\"a\",\"b\",\"c\"]}\n\nI need to make sure:\n1. It's valid JSON\n2. It matches"
+  },
+  {
+   "id": "json2",
+   "cat": "json",
+   "pass": false,
+   "time_s": 7.6,
+   "answer_head": "The user wants me to send ONLY valid JSON: {\"status\": \"ok\", \"total\": 42}\n\nThis is a straightforward request. I need to output exactly that J"
+  },
+  {
+   "id": "bullets5",
+   "cat": "format",
+   "pass": false,
+   "time_s": 20.6,
+   "answer_head": "The user wants exactly 5 reasons to fine-tune an LLM.\nFormat: One per line starting with '- '.\nNo extra text, no numbering, just the 5 lines"
+  },
+  {
+   "id": "bullets3pt",
+   "cat": "format",
+   "pass": false,
+   "time_s": 12.0,
+   "answer_head": "O usu\u00e1rio pede em portugu\u00eas: \"De exatamente 3 beneficios do ROCm, um por linha com '- '\". Preciso responder exatamente 3 benef\u00edcios do ROCm,"
+  },
+  {
+   "id": "codefence",
+   "cat": "format",
+   "pass": true,
+   "time_s": 4.7,
+   "answer_head": "The user wants a Python function `add(a,b)` inside a ```python code fence. Nothing else.\n\nI need to provide only the code fence with the fun"
+  },
+  {
+   "id": "single_sentence",
+   "cat": "format",
+   "pass": false,
+   "time_s": 20.3,
+   "answer_head": "The user wants a one-sentence explanation of what a GPU is. I need to be concise, accurate, and capture the essence: a specialized processor"
+  },
+  {
+   "id": "keyword_bandwidth",
+   "cat": "content",
+   "pass": true,
+   "time_s": 20.4,
+   "answer_head": "The user wants a single paragraph explaining why memory bandwidth matters for LLM inference.\nConstraint: Must include the word 'bandwidth'.\n"
+  },
+  {
+   "id": "keyword_hermes",
+   "cat": "content",
+   "pass": true,
+   "time_s": 8.1,
+   "answer_head": "The user wants a single sentence that includes both the words \"agent\" and \"tool\". I need to make sure it's exactly one sentence, grammatical"
+  },
+  {
+   "id": "tool_weather",
+   "cat": "tool",
+   "pass": true,
+   "time_s": 2.7,
+   "answer_head": "The user is asking for the current weather in Sao Paulo. I need to use the get_weather function with the city parameter set to \"Sao Paulo\".\n"
+  },
+  {
+   "id": "tool_stock",
+   "cat": "tool",
+   "pass": true,
+   "time_s": 3.1,
+   "answer_head": "The user wants to check the current price of AAPL. I need to use the get_stock tool with the ticker \"AAPL\". The response must be ONLY JSON w"
+  },
+  {
+   "id": "nopreamble",
+   "cat": "format",
+   "pass": false,
+   "time_s": 1.7,
+   "answer_head": "The user wants a direct answer to \"2+2=?\" with no preamble or greeting. The answer is 4.\n</think>\n\n4"
+  },
+  {
+   "id": "tsv",
+   "cat": "format",
+   "pass": false,
+   "time_s": 20.5,
+   "answer_head": "The user wants a TSV (Tab-Separated Values) output with exactly 3 rows and 2 columns.\nThe columns are: city and population.\nNo header row.\nN"
+  },
+  {
+   "id": "cap_words",
+   "cat": "format",
+   "pass": false,
+   "time_s": 20.6,
+   "answer_head": "The user wants a summary of LoRA in at most 20 words. I need to be concise and accurate.\n\nLoRA (Low-Rank Adaptation) is a parameter-efficien"
+  },
+  {
+   "id": "pt_short",
+   "cat": "format",
+   "pass": false,
+   "time_s": 20.3,
+   "answer_head": "The user wants a response in Portuguese, maximum 15 words, explaining what VRAM is.\n\nVRAM = Video Random Access Memory. In Portuguese: Mem\u00f3r"
+  },
+  {
+   "id": "code_no_comment",
+   "cat": "format",
+   "pass": true,
+   "time_s": 3.4,
+   "answer_head": "The user wants me to write Python code that creates a list comprehension: x = [i*i for i in range(10)]. They want the code only, no explanat"
+  },
+  {
+   "id": "json_require_keys",
+   "cat": "json",
+   "pass": false,
+   "time_s": 5.9,
+   "answer_head": "The user wants a JSON output with specific keys and values. They explicitly said \"JSON only\". I need to provide exactly the JSON object they"
+  },
+  {
+   "id": "two_answers",
+   "cat": "format",
+   "pass": false,
+   "time_s": 20.8,
+   "answer_head": "The user wants exactly two short sentences. I need to provide a response that is exactly two sentences, and each should be short. I should n"
+  },
+  {
+   "id": "explicit_tool_names",
+   "cat": "tool",
+   "pass": false,
+   "time_s": 3.0,
+   "answer_head": "The user wants to schedule a meeting tomorrow at 10am. The available tools are send_email and create_calendar_event. The user explicitly req"
+  },
+  {
+   "id": "no_markdown",
+   "cat": "format",
+   "pass": true,
+   "time_s": 4.1,
+   "answer_head": "The user wants the square root of 144, and specifically asks to reply without markdown.\n\nThe square root of 144 is 12.\n\nI should provide jus"
+  },
+  {
+   "id": "bilingual_follow",
+   "cat": "format",
+   "pass": false,
+   "time_s": 2.2,
+   "answer_head": "The user is asking me to respond with 'ok' if I understood, and only the word 'ok'. This is a simple instruction. I should comply exactly as"
+  }
+ ]
+}

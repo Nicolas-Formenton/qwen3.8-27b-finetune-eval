@@ -1,0 +1,4 @@
+Rank,Model,Non-Live Overall Acc,AST Summary,Simple AST,Python Simple AST,Java Simple AST,JavaScript Simple AST,Multiple AST,Parallel AST,Parallel Multiple AST,Irrelevance Detection
+1,Qwen3.8-27B + xLAM-60k LoRA r16 (SFT) (FC),89.69%,89.69%,80.25%,96.75%,64.00%,80.00%,95.00%,94.00%,89.50%,5.42%
+2,Qwen3.8-27B + distill Kimi K2.6 (on xLAM) (FC),88.06%,88.06%,76.75%,94.25%,64.00%,72.00%,94.50%,91.00%,90.00%,85.83%
+3,Qwen3.8-27B base BF16 (FC),87.87%,87.87%,78.50%,96.50%,63.00%,76.00%,95.00%,89.50%,88.50%,67.92%

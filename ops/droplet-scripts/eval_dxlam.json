@@ -1,0 +1,145 @@
+{
+ "model": "dxlam",
+ "results": [
+  {
+   "id": "json1",
+   "cat": "json",
+   "pass": false,
+   "time_s": 5.5,
+   "answer_head": "The user wants me to reply ONLY with valid JSON in the format: {\"ok\": true, \"items\": [\"a\",\"b\",\"c\"]}\n\nI need to make sure:\n1. It's valid JSON"
+  },
+  {
+   "id": "json2",
+   "cat": "json",
+   "pass": false,
+   "time_s": 7.6,
+   "answer_head": "The user wants me to send ONLY valid JSON: {\"status\": \"ok\", \"total\": 42}\n\nThis is a straightforward request. I need to output exactly that J"
+  },
+  {
+   "id": "bullets5",
+   "cat": "format",
+   "pass": false,
+   "time_s": 18.6,
+   "answer_head": "The user wants exactly 5 reasons to fine-tune an LLM.\nFormat: One per line starting with '- '.\nNo extra text, no numbering, just the 5 lines"
+  },
+  {
+   "id": "bullets3pt",
+   "cat": "format",
+   "pass": false,
+   "time_s": 20.6,
+   "answer_head": "The user is asking for exactly 3 benefits of ROCm, one per line, each starting with '- '.\n\nROCm is AMD's open-source software stack for GPU "
+  },
+  {
+   "id": "codefence",
+   "cat": "format",
+   "pass": true,
+   "time_s": 5.2,
+   "answer_head": "The user wants a Python function `add(a, b)` inside a ```python code fence. Nothing else.\n\nSo I need to provide exactly:\n```python\ndef add(a"
+  },
+  {
+   "id": "single_sentence",
+   "cat": "format",
+   "pass": false,
+   "time_s": 18.8,
+   "answer_head": "The user wants a one-sentence explanation of what a GPU is. I need to be concise, accurate, and capture the essence of a GPU (Graphics Proce"
+  },
+  {
+   "id": "keyword_bandwidth",
+   "cat": "content",
+   "pass": true,
+   "time_s": 20.5,
+   "answer_head": "The user wants a one-paragraph explanation of why memory bandwidth matters for LLM inference. I need to include the word 'bandwidth'. Let me"
+  },
+  {
+   "id": "keyword_hermes",
+   "cat": "content",
+   "pass": true,
+   "time_s": 7.1,
+   "answer_head": "The user wants a single sentence that includes both the words 'agent' and 'tool'. This is a straightforward request. I need to craft one sen"
+  },
+  {
+   "id": "tool_weather",
+   "cat": "tool",
+   "pass": false,
+   "time_s": 6.7,
+   "answer_head": "The user is asking for the current weather in Sao Paulo. I have a tool available: get_weather, which takes a city parameter. I should call t"
+  },
+  {
+   "id": "tool_stock",
+   "cat": "tool",
+   "pass": false,
+   "time_s": 4.0,
+   "answer_head": "The user wants to check the current price of AAPL. I have a tool called get_stock that takes a ticker parameter. I should call it with ticke"
+  },
+  {
+   "id": "nopreamble",
+   "cat": "format",
+   "pass": false,
+   "time_s": 2.0,
+   "answer_head": "The user wants a direct answer to \"2+2=?\" with no preamble or greeting. The answer is 4. I should just output \"4\".\n</think>\n\n4"
+  },
+  {
+   "id": "tsv",
+   "cat": "format",
+   "pass": false,
+   "time_s": 20.4,
+   "answer_head": "The user wants a TSV (Tab-Separated Values) output with exactly 3 rows and 2 columns.\nThe columns are: city and population.\nNo header row.\nN"
+  },
+  {
+   "id": "cap_words",
+   "cat": "format",
+   "pass": false,
+   "time_s": 20.9,
+   "answer_head": "The user wants a summary of LoRA (Low-Rank Adaptation) in at most 20 words. I need to be concise and accurate.\n\nLoRA is a parameter-efficien"
+  },
+  {
+   "id": "pt_short",
+   "cat": "format",
+   "pass": false,
+   "time_s": 20.8,
+   "answer_head": "The user wants a response in Portuguese, maximum 15 words, explaining what VRAM is.\n\nVRAM = Video Random Access Memory. In Portuguese: Mem\u00f3r"
+  },
+  {
+   "id": "code_no_comment",
+   "cat": "format",
+   "pass": true,
+   "time_s": 12.8,
+   "answer_head": "The user wants me to write Python code that creates a list comprehension: x = [i*i for i in range(10)]. They want the code only, no explanat"
+  },
+  {
+   "id": "json_require_keys",
+   "cat": "json",
+   "pass": false,
+   "time_s": 5.9,
+   "answer_head": "The user wants a JSON output with specific keys: \"model\" and \"vram_gb\". The values should be \"qwen\" and 192 respectively. I need to output o"
+  },
+  {
+   "id": "two_answers",
+   "cat": "format",
+   "pass": false,
+   "time_s": 19.8,
+   "answer_head": "The user wants me to answer with exactly two short sentences. They haven't asked a specific question yet, so I should provide a brief acknow"
+  },
+  {
+   "id": "explicit_tool_names",
+   "cat": "tool",
+   "pass": false,
+   "time_s": 3.5,
+   "answer_head": "The user wants to schedule a meeting tomorrow at 10am. They want me to reply only with the tool name.\n\nAvailable tools: send_email, create_c"
+  },
+  {
+   "id": "no_markdown",
+   "cat": "format",
+   "pass": false,
+   "time_s": 15.1,
+   "answer_head": "The user wants me to reply without markdown to the query \"the square root of 144.\"\n\nThe square root of 144 is 12.\n\nI need to reply without m"
+  },
+  {
+   "id": "bilingual_follow",
+   "cat": "format",
+   "pass": false,
+   "time_s": 2.7,
+   "answer_head": "The user is asking me to respond with 'ok' if I understood, and only the word 'ok'. This is a simple instruction to confirm understanding wi"
+  }
+ ]
+}
