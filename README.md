@@ -246,10 +246,18 @@ trustworthy rather than on more arms of the matrix.
 training/      LoRA training and the merge/verify tooling
 serving/       vLLM launch script with the flags that matter, plus the toggle benchmark
 evaluation/    Benchmarks, the prefill profiler, and the harness fixes
-results/       Raw outputs: BFCL CSVs, τ³ simulation JSONs, prefill profile, serving baselines
+results/       Raw outputs: BFCL CSVs, τ³ simulation JSONs (gzipped), prefill profile, serving baselines
 docs/          FAILURES.md (the bug log), METHODOLOGY.md, RECREATE.md
 ops/           Provisioning and teardown for the cloud GPU instance
 evals/         Working tree from the development phase, kept for provenance
+```
+
+The τ³ simulation logs under `results/tau3/` are stored gzipped: 47 MB of raw JSON compresses to
+5.4 MB with no loss. Nothing in the repo reads them programmatically (the aggregator reads
+`results/tau3-summary.json`), so decompress on demand:
+
+```bash
+gunzip -k results/tau3/final/*/results.json.gz
 ```
 
 `evaluation/` holds the curated entry points, the ones the commands below use. `evals/` is the
