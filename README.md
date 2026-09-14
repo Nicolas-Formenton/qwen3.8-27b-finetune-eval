@@ -28,6 +28,10 @@ Full per-category table in [Results](#results), raw output in `results/bfcl/`.
 
 ## What was built
 
+![Pipeline: data sources feed LoRA training, which feeds vLLM serving on an AMD Instinct MI300X,
+which feeds BFCL and tau3 evaluation. The adapters and the raw results are published to the
+Hugging Face Hub and GitHub.](docs/architecture.svg)
+
 | Stage | What |
 |---|---|
 | **Train** | Five LoRA r16 adapters on Qwen3.8-27B: two SFT branches (tool-calling, instruction), then distillation on each of the three resulting branches, plus the base |

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 470" width="1100" height="470" role="img" aria-label="Pipeline: data sources feed LoRA training, which feeds vLLM serving on an AMD MI300X, which feeds BFCL and tau3 evaluation. Adapters and results are published to Hugging Face and GitHub.">
+  <title>Qwen3.8-27B on AMD Instinct MI300X: the pipeline</title>
+  <desc>A four-stage pipeline. Data sources feed LoRA training, which feeds vLLM serving on an AMD Instinct MI300X, which feeds BFCL and tau3 evaluation. The adapters and the raw results are published to the Hugging Face Hub and GitHub.</desc>
+
+  <style>
+    .t      { font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
+    .hdr    { font-size: 14px; font-weight: bold; fill: #FFFFFF; letter-spacing: 1.4px; }
+    .item   { font-size: 12px; font-weight: bold; fill: #2E3440; }
+    .sub    { font-size: 11px; fill: #7B8794; }
+    .box    { fill: #FFFFFF; stroke: #D8DEE9; stroke-width: 1.5; }
+    .title  { font-size: 19px; font-weight: bold; fill: #2E3440; }
+    .note   { font-size: 11.5px; fill: #7B8794; }
+    .band   { fill: #F8F9FB; stroke: #D8DEE9; stroke-width: 1.5; }
+  </style>
+
+  <rect width="1100" height="470" fill="#FFFFFF"/>
+
+  <text class="t title" x="28" y="34">From raw data to a published, measured result</text>
+  <text class="t note" x="28" y="53">Qwen3.8-27B on one AMD Instinct MI300X. Every number in this repository came out of this pipeline.</text>
+
+  <!-- ============ connectors (drawn first, so boxes sit on top) ============ -->
+  <g stroke="#98A2B3" stroke-width="1.8" fill="none">
+    <line x1="263" y1="208" x2="290" y2="208"/>
+    <line x1="532" y1="208" x2="559" y2="208"/>
+    <line x1="801" y1="208" x2="828" y2="208"/>
+    <line x1="414" y1="358" x2="414" y2="382"/>
+    <line x1="952" y1="358" x2="952" y2="382"/>
+  </g>
+  <g fill="#98A2B3">
+    <polygon points="297,208 289,204 289,212"/>
+    <polygon points="566,208 558,204 558,212"/>
+    <polygon points="835,208 827,204 827,212"/>
+    <polygon points="414,390 410,382 418,382"/>
+    <polygon points="952,390 948,382 956,382"/>
+  </g>
+
+  <!-- ============ 1. DATA ============ -->
+  <rect class="box" x="28" y="58" width="235" height="300" rx="7"/>
+  <path d="M28 65 a7 7 0 0 1 7 -7 h221 a7 7 0 0 1 7 7 v27 h-235 z" fill="#7B8794"/>
+  <text class="t hdr" x="145.5" y="80" text-anchor="middle">DATA</text>
+  <text class="t item" x="44" y="116">Salesforce/xLAM-60k</text>
+  <text class="t sub"  x="44" y="134">tool calling, 6,000 rows</text>
+  <text class="t item" x="44" y="164">OpenHermes-2.5</text>
+  <text class="t sub"  x="44" y="182">instruction, 3,000 rows</text>
+  <text class="t item" x="44" y="212">lordx64 Kimi K2.6</text>
+  <text class="t sub"  x="44" y="230">distillation, 1,500 rows</text>
+  <text class="t item" x="44" y="260">Qwen3.8-27B base</text>
+  <text class="t sub"  x="44" y="278">27.8B dense, BF16</text>
+
+  <!-- ============ 2. TRAINING ============ -->
+  <rect class="box" x="297" y="58" width="235" height="300" rx="7"/>
+  <path d="M297 65 a7 7 0 0 1 7 -7 h221 a7 7 0 0 1 7 7 v27 h-235 z" fill="#4C6EF5"/>
+  <text class="t hdr" x="414.5" y="80" text-anchor="middle">TRAINING</text>
+  <text class="t item" x="313" y="116">Unsloth + TRL + PEFT</text>
+  <text class="t sub"  x="313" y="134">LoRA rank 16, alpha 16</text>
+  <text class="t item" x="313" y="164">240 steps per branch</text>
+  <text class="t sub"  x="313" y="182">batch 1, grad accum 8-16</text>
+  <text class="t item" x="313" y="212">3x2 design</text>
+  <text class="t sub"  x="313" y="230">SFT crossed with distillation</text>
+  <text class="t item" x="313" y="260">5 adapters</text>
+  <text class="t sub"  x="313" y="278">2 controls never measured</text>
+
+  <!-- ============ 3. SERVING ============ -->
+  <rect class="box" x="566" y="58" width="235" height="300" rx="7"/>
+  <path d="M566 65 a7 7 0 0 1 7 -7 h221 a7 7 0 0 1 7 7 v27 h-235 z" fill="#F59F00"/>
+  <text class="t hdr" x="683.5" y="80" text-anchor="middle">SERVING</text>
+  <text class="t item" x="582" y="116">vLLM on ROCm</text>
+  <text class="t sub"  x="582" y="134">AMD Instinct MI300X</text>
+  <text class="t sub"  x="582" y="152">192 GB HBM, gfx942</text>
+  <text class="t item" x="582" y="182">AITER flash attention</text>
+  <text class="t sub"  x="582" y="200">CUDA graphs, 262K context</text>
+  <text class="t item" x="582" y="230">LoRA swapped over API</text>
+  <text class="t sub"  x="582" y="248">one adapter resident</text>
+  <text class="t item" x="582" y="278" fill="#12B886">4.3 to 47 tok/s</text>
+  <text class="t sub"  x="582" y="296">10x, configuration only</text>
+
+  <!-- ============ 4. EVALUATION ============ -->
+  <rect class="box" x="835" y="58" width="235" height="300" rx="7"/>
+  <path d="M835 65 a7 7 0 0 1 7 -7 h221 a7 7 0 0 1 7 7 v27 h-235 z" fill="#12B886"/>
+  <text class="t hdr" x="952.5" y="80" text-anchor="middle">EVALUATION</text>
+  <text class="t item" x="851" y="116">BFCL v4 non-live</text>
+  <text class="t sub"  x="851" y="134">plus multi-turn on base</text>
+  <text class="t item" x="851" y="164">tau3-bench</text>
+  <text class="t sub"  x="851" y="182">airline and retail</text>
+  <text class="t item" x="851" y="212">Prefill profile</text>
+  <text class="t sub"  x="851" y="230">1K to 256K, cold vs warm</text>
+  <text class="t item" x="851" y="260">9 harness defects</text>
+  <text class="t sub"  x="851" y="278">found, then fixed</text>
+
+  <!-- ============ published band ============ -->
+  <rect class="band" x="28" y="390" width="1042" height="58" rx="7"/>
+  <text class="t item" x="46" y="414">PUBLISHED</text>
+  <text class="t sub"  x="46" y="433">huggingface.co/nickzin  (5 adapters, model cards, licenses)     github.com/Nicolas-Formenton/qwen3.8-27b-finetune-eval  (raw results, failure log, reproduction steps)</text>
+
+  <text class="t note" x="28" y="464">Credit: the GPU time was provided by the AMD AI Developer Program. AMD did not review or endorse these results.</text>
+</svg>
