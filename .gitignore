@@ -63,3 +63,6 @@ ops/droplet.env
 *.bak
 *.bak-*
 
+
+# Previsoes PNG dos graficos (os entregaveis sao os .svg)
+docs/charts/*.png

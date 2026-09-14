@@ -23,6 +23,9 @@ call instead of declining, which is the failure mode that matters most in an age
 
 Full per-category table in [Results](#results), raw output in `results/bfcl/`.
 
+![Two panels: on the left overall accuracy for the three models is nearly identical at 87.87, 89.69 and 88.06 percent. On the right refusal detection diverges sharply at 67.92, 5.42 and 85.83](docs/charts/the-finding.svg)
+
+
 ## What was built
 
 | Stage | What |
@@ -37,13 +40,13 @@ The design is a 3x2 rather than "some fine-tunes I tried", because the question 
 is whether distillation *specifically* repairs tool-calling damage or just helps generally. That
 needs a branch that was never tool-calling-tuned.
 
-| Adapter | SFT branch | Distillation | Benchmarked |
-|---|---|---|---|
-| `oh` | OpenHermes-2.5 | no | no |
-| `xlam` | xLAM-60k (tool calling) | no | **yes** |
-| `distill-base` | none (base) | yes | no |
-| `doh` | OpenHermes-2.5 | yes | no |
-| `dxlam` | xLAM-60k (tool calling) | yes | **yes** |
+| Adapter | SFT branch | Distillation | Benchmarked | Published |
+|---|---|---|---|---|
+| `oh` | OpenHermes-2.5 | no | no | [Hub](https://huggingface.co/nickzin/qwen3.8-27b-lora-oh) |
+| `xlam` | xLAM-60k (tool calling) | no | **yes** | [Hub](https://huggingface.co/nickzin/qwen3.8-27b-lora-xlam) |
+| `distill-base` | none (base) | yes | no | [Hub](https://huggingface.co/nickzin/qwen3.8-27b-lora-distill-base) |
+| `doh` | OpenHermes-2.5 | yes | no | [Hub](https://huggingface.co/nickzin/qwen3.8-27b-lora-doh) |
+| `dxlam` | xLAM-60k (tool calling) | yes | **yes** | [Hub](https://huggingface.co/nickzin/qwen3.8-27b-lora-dxlam) |
 
 `distill-base` and `doh` are the controls for the headline result. They are trained and published
 but were never benchmarked, because the GPU budget ran out first. That gap is real and it is
@@ -88,6 +91,8 @@ runs at **47 tok/s**, and the fix was configuration, not hardware.
 Long context is where the attention backend decides everything: without it the model is fine on
 short prompts and unusable past 30k tokens.
 
+![Grouped bars: at about 1k tokens the backend makes no difference, 67.0 versus 67.3 tok per second. At 90k tokens it is 6.8 with the legacy backend against 60.3 with AITER, 8.9x](docs/charts/serving-backend.svg)
+
 The launch configuration that produced those numbers:
 
 ```bash
@@ -118,6 +123,8 @@ cannot serve the work.
 | 128k | 2,253 tok/s | 107,055 tok/s | 43.74 s |
 | 256k | 1,244 tok/s | **170,827 tok/s** | 158.40 s |
 
+![Line chart on a log scale. Cold prefill rises to 7,229 tok per second at 16k then falls to 1,244 at 256k. Warm prefill climbs from 8,197 to 170,827, riding the prefix cache](docs/charts/prefill-curve.svg)
+
 Cold prefill peaks around 16k and falls off after that, which is the attention term showing up.
 Warm prefill is limited by the cache rather than compute, and stays fast all the way to 256k.
 
@@ -138,6 +145,8 @@ Fine-tune handler, reasoning enabled, temperature 0.001, 16 threads, seed 300.
 | **Refusal detection** | 67.92% | **5.42%** | **85.83%** |
 | **Non-Live Overall** | 87.87% | **89.69%** | 88.06% |
 
+![Horizontal grouped bars for seven BFCL categories. The first six keep the three models within a few points of each other. Refusal detection is the exception at 67.9, 5.4 and 85.8](docs/charts/bfcl-categories.svg)
+
 The base model additionally ran `multi_turn`: base 69.00%, long context 62.00%, missing function
 65.50%, missing parameter 52.00%.
 
@@ -157,6 +166,8 @@ test from BFCL: single decisions versus multi-step behaviour.
 | D-xLAM | airline | 3 | 16 | 0.750 |
 | base | retail | 3 | 45 | 0.689 |
 | xLAM | retail | 3 | 21 | 0.571 |
+
+![Bars with 95 percent Wilson confidence intervals for airline and retail. base leads xLAM in both domains, but the intervals overlap, so the difference sits inside the noise](docs/charts/tau3-noise.svg)
 
 The direction repeats (base ahead of the tool-calling fine-tune in both domains, at both 3 and 4
 trials) and it matches the BFCL finding. It does **not** reach significance: the best comparison
